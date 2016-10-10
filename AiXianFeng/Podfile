@@ -1,0 +1,10 @@
+platform :ios, '8.0'
+
+target 'AiXianFeng' do
+
+pod 'AFNetworking'
+pod 'YYModel'
+pod 'SDWebImage'
+pod 'Masonry'
+
+end
