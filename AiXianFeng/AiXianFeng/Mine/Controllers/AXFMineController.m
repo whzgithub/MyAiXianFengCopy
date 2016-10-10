@@ -7,7 +7,17 @@
 //
 
 #import "AXFMineController.h"
+#import "AXFMineView.h"
 
 @implementation AXFMineController
+
+- (void) viewDidLoad {
+
+    [super viewDidLoad];
+    
+    // 自定义“我的”View
+    AXFMineView *mineView = [[AXFMineView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:mineView];
+}
 
 @end

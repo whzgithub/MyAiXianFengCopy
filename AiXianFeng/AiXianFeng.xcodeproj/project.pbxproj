@@ -18,8 +18,10 @@
 		926E51731DABC87A006DF3EA /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51661DABC87A006DF3EA /* UIScreen+CZAddition.m */; };
 		926E51741DABC87A006DF3EA /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51681DABC87A006DF3EA /* UIView+CZAddition.m */; };
 		926E51751DABC87A006DF3EA /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E516A1DABC87A006DF3EA /* UIViewController+CZAddition.m */; };
-		926E51791DABED01006DF3EA /* AXFHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51781DABED01006DF3EA /* AXFHomeTableView.m */; };
+		926E51791DABED01006DF3EA /* AXFHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51781DABED01006DF3EA /* AXFHomeView.m */; };
 		926E517C1DABEDEE006DF3EA /* AXFHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */; };
+		926E51801DAC042C006DF3EA /* AXFMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E517F1DAC042C006DF3EA /* AXFMineView.m */; };
+		926E51831DAC05F5006DF3EA /* AXFMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */; };
 		FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF981DABD65600E00C5B /* AXFMarketController.m */; };
 		FD13DF9C1DABD66200E00C5B /* AXFOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9B1DABD66200E00C5B /* AXFOrderController.m */; };
 		FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9E1DABD66F00E00C5B /* AXFShopCarController.m */; };
@@ -78,10 +80,14 @@
 		926E51681DABC87A006DF3EA /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
 		926E51691DABC87A006DF3EA /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		926E516A1DABC87A006DF3EA /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
-		926E51771DABED01006DF3EA /* AXFHomeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeTableView.h; sourceTree = "<group>"; };
-		926E51781DABED01006DF3EA /* AXFHomeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeTableView.m; sourceTree = "<group>"; };
+		926E51771DABED01006DF3EA /* AXFHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeView.h; sourceTree = "<group>"; };
+		926E51781DABED01006DF3EA /* AXFHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeView.m; sourceTree = "<group>"; };
 		926E517A1DABEDEE006DF3EA /* AXFHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeHeaderView.h; sourceTree = "<group>"; };
 		926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeHeaderView.m; sourceTree = "<group>"; };
+		926E517E1DAC042C006DF3EA /* AXFMineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineView.h; sourceTree = "<group>"; };
+		926E517F1DAC042C006DF3EA /* AXFMineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineView.m; sourceTree = "<group>"; };
+		926E51811DAC05F5006DF3EA /* AXFMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineHeaderView.h; sourceTree = "<group>"; };
+		926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineHeaderView.m; sourceTree = "<group>"; };
 		D575B1553EDC60EDBF774CC2 /* libPods-AiXianFeng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AiXianFeng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD13DF971DABD65600E00C5B /* AXFMarketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMarketController.h; sourceTree = "<group>"; };
 		FD13DF981DABD65600E00C5B /* AXFMarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMarketController.m; sourceTree = "<group>"; };
@@ -189,10 +195,21 @@
 		926E51761DABEC9F006DF3EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				926E51771DABED01006DF3EA /* AXFHomeTableView.h */,
-				926E51781DABED01006DF3EA /* AXFHomeTableView.m */,
+				926E51771DABED01006DF3EA /* AXFHomeView.h */,
+				926E51781DABED01006DF3EA /* AXFHomeView.m */,
 				926E517A1DABEDEE006DF3EA /* AXFHomeHeaderView.h */,
 				926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		926E517D1DAC040D006DF3EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				926E517E1DAC042C006DF3EA /* AXFMineView.h */,
+				926E517F1DAC042C006DF3EA /* AXFMineView.m */,
+				926E51811DAC05F5006DF3EA /* AXFMineHeaderView.h */,
+				926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				FDBC03F51DABA7E900F11C39 /* Controllers */,
+				926E517D1DAC040D006DF3EA /* Views */,
 			);
 			name = "Mine(我的)";
 			path = AiXianFeng/Mine;
@@ -589,6 +607,7 @@
 			files = (
 				926E51711DABC87A006DF3EA /* UIColor+CZAddition.m in Sources */,
 				FDBC04041DABA7E900F11C39 /* AppDelegate.m in Sources */,
+				926E51831DAC05F5006DF3EA /* AXFMineHeaderView.m in Sources */,
 				FD13DF9C1DABD66200E00C5B /* AXFOrderController.m in Sources */,
 				926E516E1DABC87A006DF3EA /* NSAttributedString+CZAdditon.m in Sources */,
 				FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */,
@@ -600,8 +619,9 @@
 				FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */,
 				FDE586801DABCC53004C48C2 /* AXFTabBarController.m in Sources */,
 				926E51721DABC87A006DF3EA /* UILabel+CZAddition.m in Sources */,
+				926E51801DAC042C006DF3EA /* AXFMineView.m in Sources */,
 				926E516D1DABC87A006DF3EA /* NSArray+Log.m in Sources */,
-				926E51791DABED01006DF3EA /* AXFHomeTableView.m in Sources */,
+				926E51791DABED01006DF3EA /* AXFHomeView.m in Sources */,
 				FDE586831DABCF16004C48C2 /* AXFHomeController.m in Sources */,
 				FDE5867D1DABCC3A004C48C2 /* AXFNavigationController.m in Sources */,
 				FDBC03BB1DABA69200F11C39 /* main.m in Sources */,

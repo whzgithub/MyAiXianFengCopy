@@ -1,5 +1,5 @@
 //
-//  AXFHomeTableView.h
+//  AXFHomeView.h
 //  AiXianFeng
 //
 //  Created by whz on 16/10/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFHomeTableView : UIView
+@interface AXFHomeView : UIView
 
 @end

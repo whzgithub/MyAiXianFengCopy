@@ -7,7 +7,7 @@
 //
 
 #import "AXFHomeController.h"
-#import "AXFHomeTableView.h"
+#import "AXFHomeView.h"
 
 @implementation AXFHomeController
 
@@ -21,7 +21,7 @@
 
 - (void) setupUI {
     
-    AXFHomeTableView *homeTableView = [[AXFHomeTableView alloc] initWithFrame:self.view.bounds];
+    AXFHomeView *homeTableView = [[AXFHomeView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:homeTableView];
 }
 

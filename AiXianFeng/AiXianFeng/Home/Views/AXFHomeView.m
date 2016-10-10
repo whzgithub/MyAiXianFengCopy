@@ -1,21 +1,21 @@
 //
-//  AXFHomeTableView.m
+//  AXFHomeView.m
 //  AiXianFeng
 //
 //  Created by whz on 16/10/10.
 //  Copyright © 2016年 LongChuang. All rights reserved.
 //
 
-#import "AXFHomeTableView.h"
+#import "AXFHomeView.h"
 #import "AXFHomeHeaderView.h"
 
 #define KHOMETABLECELLID @"kHomeTableCellID"
 
-@interface AXFHomeTableView () <UITableViewDelegate, UITableViewDataSource>
+@interface AXFHomeView () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation AXFHomeTableView
+@implementation AXFHomeView
 
 - (instancetype) initWithFrame:(CGRect)frame {
 
@@ -28,17 +28,17 @@
 
 - (void) setupUI{
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.bounds];
-    [self addSubview:tableView];
+    UITableView *homeTableView = [[UITableView alloc] initWithFrame:self.bounds];
+    [self addSubview:homeTableView];
     
-    tableView.delegate = self;
-    tableView.dataSource = self;
+    homeTableView.delegate = self;
+    homeTableView.dataSource = self;
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:KHOMETABLECELLID];
+    [homeTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:KHOMETABLECELLID];
     
-    AXFHomeHeaderView *headerView = [[AXFHomeHeaderView alloc] init];
-    headerView.backgroundColor = [UIColor lightGrayColor];
-    tableView.tableHeaderView = headerView;
+    AXFHomeHeaderView *homeHeaderView = [[AXFHomeHeaderView alloc] init];
+    homeHeaderView.backgroundColor = [UIColor lightGrayColor];
+    homeTableView.tableHeaderView = homeHeaderView;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
