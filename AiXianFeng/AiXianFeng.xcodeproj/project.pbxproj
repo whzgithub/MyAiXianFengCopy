@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18166DA51DAD035A005A09E7 /* AXFSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA01DAD035A005A09E7 /* AXFSlideCell.m */; };
+		18166DA61DAD035A005A09E7 /* AXFSlideCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA21DAD035A005A09E7 /* AXFSlideCollectionViewCell.m */; };
+		18166DA71DAD035A005A09E7 /* AXFSlideFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA41DAD035A005A09E7 /* AXFSlideFlowLayout.m */; };
 		40F998443F964B3B3AFD066C /* libPods-AiXianFeng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D575B1553EDC60EDBF774CC2 /* libPods-AiXianFeng.a */; };
 		926E516C1DABC87A006DF3EA /* NSArray+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51581DABC87A006DF3EA /* NSArray+CZAddition.m */; };
 		926E516D1DABC87A006DF3EA /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E515A1DABC87A006DF3EA /* NSArray+Log.m */; };
@@ -18,14 +21,22 @@
 		926E51731DABC87A006DF3EA /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51661DABC87A006DF3EA /* UIScreen+CZAddition.m */; };
 		926E51741DABC87A006DF3EA /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51681DABC87A006DF3EA /* UIView+CZAddition.m */; };
 		926E51751DABC87A006DF3EA /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E516A1DABC87A006DF3EA /* UIViewController+CZAddition.m */; };
-		926E51791DABED01006DF3EA /* AXFHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51781DABED01006DF3EA /* AXFHomeView.m */; };
-		926E517C1DABEDEE006DF3EA /* AXFHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */; };
-		926E51801DAC042C006DF3EA /* AXFMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E517F1DAC042C006DF3EA /* AXFMineView.m */; };
-		926E51831DAC05F5006DF3EA /* AXFMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */; };
+		926E52051DAD0398006DF3EA /* AXFMineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51FE1DAD0398006DF3EA /* AXFMineScrollView.m */; };
+		926E52061DAD0398006DF3EA /* AXFMineOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E52001DAD0398006DF3EA /* AXFMineOrderView.m */; };
+		926E52071DAD0398006DF3EA /* AXFMineWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E52021DAD0398006DF3EA /* AXFMineWalletView.m */; };
+		926E52081DAD0398006DF3EA /* AXFMineOthersFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E52041DAD0398006DF3EA /* AXFMineOthersFunctionView.m */; };
+		926E520B1DAD03A9006DF3EA /* AXFMineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E520A1DAD03A9006DF3EA /* AXFMineTopView.m */; };
 		FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF981DABD65600E00C5B /* AXFMarketController.m */; };
 		FD13DF9C1DABD66200E00C5B /* AXFOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9B1DABD66200E00C5B /* AXFOrderController.m */; };
 		FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9E1DABD66F00E00C5B /* AXFShopCarController.m */; };
 		FD13DFA21DABD67A00E00C5B /* AXFMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DFA11DABD67A00E00C5B /* AXFMineController.m */; };
+		FD200DA61DACAE68009587A8 /* AXFFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DA51DACAE68009587A8 /* AXFFoodCell.m */; };
+		FD200DA91DACAE95009587A8 /* AXFFreshToHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DA81DACAE95009587A8 /* AXFFreshToHomeCell.m */; };
+		FD200DAC1DACAEBC009587A8 /* AXFSignatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DAB1DACAEBC009587A8 /* AXFSignatureCell.m */; };
+		FD200DB21DACAEE7009587A8 /* AXFStoresCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB11DACAEE7009587A8 /* AXFStoresCell.m */; };
+		FD200DB91DACAFD1009587A8 /* AXFHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB61DACAFD1009587A8 /* AXFHomeView.m */; };
+		FD200DBA1DACAFD1009587A8 /* AXFTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB81DACAFD1009587A8 /* AXFTableHeaderView.m */; };
+		FD200DBE1DACB0E7009587A8 /* AXFRunPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */; };
 		FDBC03BB1DABA69200F11C39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBC03BA1DABA69200F11C39 /* main.m */; };
 		FDBC03C41DABA69200F11C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBC03C21DABA69200F11C39 /* Main.storyboard */; };
 		FDBC03C61DABA69200F11C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBC03C51DABA69200F11C39 /* Assets.xcassets */; };
@@ -57,6 +68,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18166D861DACCB60005A09E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18166D9F1DAD035A005A09E7 /* AXFSlideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSlideCell.h; sourceTree = "<group>"; };
+		18166DA01DAD035A005A09E7 /* AXFSlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideCell.m; sourceTree = "<group>"; };
+		18166DA11DAD035A005A09E7 /* AXFSlideCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSlideCollectionViewCell.h; sourceTree = "<group>"; };
+		18166DA21DAD035A005A09E7 /* AXFSlideCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideCollectionViewCell.m; sourceTree = "<group>"; };
+		18166DA31DAD035A005A09E7 /* AXFSlideFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSlideFlowLayout.h; sourceTree = "<group>"; };
+		18166DA41DAD035A005A09E7 /* AXFSlideFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideFlowLayout.m; sourceTree = "<group>"; };
 		33C05A920390A538BE79A1E8 /* Pods-AiXianFeng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiXianFeng.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiXianFeng/Pods-AiXianFeng.release.xcconfig"; sourceTree = "<group>"; };
 		4D5B842912A5B249C7CA51A1 /* Pods-AiXianFeng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiXianFeng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiXianFeng/Pods-AiXianFeng.debug.xcconfig"; sourceTree = "<group>"; };
 		926E51541DABC87A006DF3EA /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
@@ -80,14 +98,16 @@
 		926E51681DABC87A006DF3EA /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
 		926E51691DABC87A006DF3EA /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		926E516A1DABC87A006DF3EA /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
-		926E51771DABED01006DF3EA /* AXFHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeView.h; sourceTree = "<group>"; };
-		926E51781DABED01006DF3EA /* AXFHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeView.m; sourceTree = "<group>"; };
-		926E517A1DABEDEE006DF3EA /* AXFHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeHeaderView.h; sourceTree = "<group>"; };
-		926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeHeaderView.m; sourceTree = "<group>"; };
-		926E517E1DAC042C006DF3EA /* AXFMineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineView.h; sourceTree = "<group>"; };
-		926E517F1DAC042C006DF3EA /* AXFMineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineView.m; sourceTree = "<group>"; };
-		926E51811DAC05F5006DF3EA /* AXFMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineHeaderView.h; sourceTree = "<group>"; };
-		926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineHeaderView.m; sourceTree = "<group>"; };
+		926E51FD1DAD0398006DF3EA /* AXFMineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineScrollView.h; sourceTree = "<group>"; };
+		926E51FE1DAD0398006DF3EA /* AXFMineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineScrollView.m; sourceTree = "<group>"; };
+		926E51FF1DAD0398006DF3EA /* AXFMineOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineOrderView.h; sourceTree = "<group>"; };
+		926E52001DAD0398006DF3EA /* AXFMineOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineOrderView.m; sourceTree = "<group>"; };
+		926E52011DAD0398006DF3EA /* AXFMineWalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineWalletView.h; sourceTree = "<group>"; };
+		926E52021DAD0398006DF3EA /* AXFMineWalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineWalletView.m; sourceTree = "<group>"; };
+		926E52031DAD0398006DF3EA /* AXFMineOthersFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineOthersFunctionView.h; sourceTree = "<group>"; };
+		926E52041DAD0398006DF3EA /* AXFMineOthersFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineOthersFunctionView.m; sourceTree = "<group>"; };
+		926E52091DAD03A9006DF3EA /* AXFMineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineTopView.h; sourceTree = "<group>"; };
+		926E520A1DAD03A9006DF3EA /* AXFMineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineTopView.m; sourceTree = "<group>"; };
 		D575B1553EDC60EDBF774CC2 /* libPods-AiXianFeng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AiXianFeng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD13DF971DABD65600E00C5B /* AXFMarketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMarketController.h; sourceTree = "<group>"; };
 		FD13DF981DABD65600E00C5B /* AXFMarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMarketController.m; sourceTree = "<group>"; };
@@ -97,6 +117,20 @@
 		FD13DF9E1DABD66F00E00C5B /* AXFShopCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFShopCarController.m; sourceTree = "<group>"; };
 		FD13DFA01DABD67A00E00C5B /* AXFMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineController.h; sourceTree = "<group>"; };
 		FD13DFA11DABD67A00E00C5B /* AXFMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineController.m; sourceTree = "<group>"; };
+		FD200DA41DACAE68009587A8 /* AXFFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFFoodCell.h; sourceTree = "<group>"; };
+		FD200DA51DACAE68009587A8 /* AXFFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFFoodCell.m; sourceTree = "<group>"; };
+		FD200DA71DACAE95009587A8 /* AXFFreshToHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFFreshToHomeCell.h; sourceTree = "<group>"; };
+		FD200DA81DACAE95009587A8 /* AXFFreshToHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFFreshToHomeCell.m; sourceTree = "<group>"; };
+		FD200DAA1DACAEBC009587A8 /* AXFSignatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSignatureCell.h; sourceTree = "<group>"; };
+		FD200DAB1DACAEBC009587A8 /* AXFSignatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSignatureCell.m; sourceTree = "<group>"; };
+		FD200DB01DACAEE7009587A8 /* AXFStoresCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFStoresCell.h; sourceTree = "<group>"; };
+		FD200DB11DACAEE7009587A8 /* AXFStoresCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFStoresCell.m; sourceTree = "<group>"; };
+		FD200DB51DACAFD1009587A8 /* AXFHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeView.h; sourceTree = "<group>"; };
+		FD200DB61DACAFD1009587A8 /* AXFHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeView.m; sourceTree = "<group>"; };
+		FD200DB71DACAFD1009587A8 /* AXFTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFTableHeaderView.h; sourceTree = "<group>"; };
+		FD200DB81DACAFD1009587A8 /* AXFTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFTableHeaderView.m; sourceTree = "<group>"; };
+		FD200DBC1DACB0E7009587A8 /* AXFRunPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFRunPlayView.h; sourceTree = "<group>"; };
+		FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFRunPlayView.m; sourceTree = "<group>"; };
 		FDBC03B61DABA69200F11C39 /* AiXianFeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiXianFeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBC03BA1DABA69200F11C39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FDBC03C31DABA69200F11C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +181,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18166D791DABDB7F005A09E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DB41DACAFD1009587A8 /* HomeView(llz) */,
+				FD200DBB1DACB030009587A8 /* RunPlay(zhb) */,
+				FD200DA11DACAE4F009587A8 /* SignatureCell(lxf) */,
+				FD200DA21DACAE4F009587A8 /* SlideCell(llz) */,
+				FD200DA31DACAE4F009587A8 /* StoresCell(hxx) */,
+				FD200DA01DACAE4F009587A8 /* FreshToHomeCell(tol) */,
+				FD200D9F1DACAE4F009587A8 /* FoodCell(whz) */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4E8B7E091BE57FE5677615C9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,26 +240,106 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
-		926E51761DABEC9F006DF3EA /* Views */ = {
+		926E51841DAC180B006DF3EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				926E51771DABED01006DF3EA /* AXFHomeView.h */,
-				926E51781DABED01006DF3EA /* AXFHomeView.m */,
-				926E517A1DABEDEE006DF3EA /* AXFHomeHeaderView.h */,
-				926E517B1DABEDEE006DF3EA /* AXFHomeHeaderView.m */,
+				926E52091DAD03A9006DF3EA /* AXFMineTopView.h */,
+				926E520A1DAD03A9006DF3EA /* AXFMineTopView.m */,
+				926E51FD1DAD0398006DF3EA /* AXFMineScrollView.h */,
+				926E51FE1DAD0398006DF3EA /* AXFMineScrollView.m */,
+				926E51FF1DAD0398006DF3EA /* AXFMineOrderView.h */,
+				926E52001DAD0398006DF3EA /* AXFMineOrderView.m */,
+				926E52011DAD0398006DF3EA /* AXFMineWalletView.h */,
+				926E52021DAD0398006DF3EA /* AXFMineWalletView.m */,
+				926E52031DAD0398006DF3EA /* AXFMineOthersFunctionView.h */,
+				926E52041DAD0398006DF3EA /* AXFMineOthersFunctionView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		926E517D1DAC040D006DF3EA /* Views */ = {
+		FD200D9F1DACAE4F009587A8 /* FoodCell(whz) */ = {
 			isa = PBXGroup;
 			children = (
-				926E517E1DAC042C006DF3EA /* AXFMineView.h */,
-				926E517F1DAC042C006DF3EA /* AXFMineView.m */,
-				926E51811DAC05F5006DF3EA /* AXFMineHeaderView.h */,
-				926E51821DAC05F5006DF3EA /* AXFMineHeaderView.m */,
+				FD200DA41DACAE68009587A8 /* AXFFoodCell.h */,
+				FD200DA51DACAE68009587A8 /* AXFFoodCell.m */,
 			);
-			path = Views;
+			name = "FoodCell(whz)";
+			path = FoodCell;
+			sourceTree = "<group>";
+		};
+		FD200DA01DACAE4F009587A8 /* FreshToHomeCell(tol) */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DA71DACAE95009587A8 /* AXFFreshToHomeCell.h */,
+				FD200DA81DACAE95009587A8 /* AXFFreshToHomeCell.m */,
+			);
+			name = "FreshToHomeCell(tol)";
+			path = FreshToHomeCell;
+			sourceTree = "<group>";
+		};
+		FD200DA11DACAE4F009587A8 /* SignatureCell(lxf) */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DAA1DACAEBC009587A8 /* AXFSignatureCell.h */,
+				FD200DAB1DACAEBC009587A8 /* AXFSignatureCell.m */,
+			);
+			name = "SignatureCell(lxf)";
+			path = SignatureCell;
+			sourceTree = "<group>";
+		};
+		FD200DA21DACAE4F009587A8 /* SlideCell(llz) */ = {
+			isa = PBXGroup;
+			children = (
+				18166D9F1DAD035A005A09E7 /* AXFSlideCell.h */,
+				18166DA01DAD035A005A09E7 /* AXFSlideCell.m */,
+				18166DA11DAD035A005A09E7 /* AXFSlideCollectionViewCell.h */,
+				18166DA21DAD035A005A09E7 /* AXFSlideCollectionViewCell.m */,
+				18166DA31DAD035A005A09E7 /* AXFSlideFlowLayout.h */,
+				18166DA41DAD035A005A09E7 /* AXFSlideFlowLayout.m */,
+			);
+			name = "SlideCell(llz)";
+			path = SlideCell;
+			sourceTree = "<group>";
+		};
+		FD200DA31DACAE4F009587A8 /* StoresCell(hxx) */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DB01DACAEE7009587A8 /* AXFStoresCell.h */,
+				FD200DB11DACAEE7009587A8 /* AXFStoresCell.m */,
+			);
+			name = "StoresCell(hxx)";
+			path = StoresCell;
+			sourceTree = "<group>";
+		};
+		FD200DB41DACAFD1009587A8 /* HomeView(llz) */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DB51DACAFD1009587A8 /* AXFHomeView.h */,
+				FD200DB61DACAFD1009587A8 /* AXFHomeView.m */,
+				FD200DB71DACAFD1009587A8 /* AXFTableHeaderView.h */,
+				FD200DB81DACAFD1009587A8 /* AXFTableHeaderView.m */,
+			);
+			name = "HomeView(llz)";
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FD200DBB1DACB030009587A8 /* RunPlay(zhb) */ = {
+			isa = PBXGroup;
+			children = (
+				FD200DBC1DACB0E7009587A8 /* AXFRunPlayView.h */,
+				FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */,
+			);
+			name = "RunPlay(zhb)";
+			path = RunPlay;
+			sourceTree = "<group>";
+		};
+		FD5E9CC71DACBF6F000BF78D /* Headers(头文件) */ = {
+			isa = PBXGroup;
+			children = (
+				18166D861DACCB60005A09E7 /* PrefixHeader.pch */,
+			);
+			name = "Headers(头文件)";
+			path = AiXianFeng/Headers;
 			sourceTree = "<group>";
 		};
 		FDBC03AD1DABA69200F11C39 = {
@@ -225,6 +353,7 @@
 				FDBC03FF1DABA7E900F11C39 /* ShopCar(购物车) */,
 				FDBC03F41DABA7E900F11C39 /* Mine(我的) */,
 				FDBC03FC1DABA7E900F11C39 /* Other */,
+				FD5E9CC71DACBF6F000BF78D /* Headers(头文件) */,
 				FDBC03B81DABA69200F11C39 /* AiXianFeng */,
 				FDBC03D21DABA69200F11C39 /* AiXianFengTests */,
 				FDBC03DD1DABA69200F11C39 /* AiXianFengUITests */,
@@ -285,8 +414,8 @@
 		FDBC03EC1DABA7E900F11C39 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				18166D791DABDB7F005A09E7 /* Views */,
 				FDBC03ED1DABA7E900F11C39 /* Controllers */,
-				926E51761DABEC9F006DF3EA /* Views */,
 			);
 			name = "Home(首页)";
 			path = AiXianFeng/Home;
@@ -323,7 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				FDBC03F51DABA7E900F11C39 /* Controllers */,
-				926E517D1DAC040D006DF3EA /* Views */,
+				926E51841DAC180B006DF3EA /* Views */,
 			);
 			name = "Mine(我的)";
 			path = AiXianFeng/Mine;
@@ -605,30 +734,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926E52051DAD0398006DF3EA /* AXFMineScrollView.m in Sources */,
 				926E51711DABC87A006DF3EA /* UIColor+CZAddition.m in Sources */,
 				FDBC04041DABA7E900F11C39 /* AppDelegate.m in Sources */,
-				926E51831DAC05F5006DF3EA /* AXFMineHeaderView.m in Sources */,
 				FD13DF9C1DABD66200E00C5B /* AXFOrderController.m in Sources */,
+				926E52061DAD0398006DF3EA /* AXFMineOrderView.m in Sources */,
 				926E516E1DABC87A006DF3EA /* NSAttributedString+CZAdditon.m in Sources */,
 				FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */,
+				FD200DB21DACAEE7009587A8 /* AXFStoresCell.m in Sources */,
+				926E52071DAD0398006DF3EA /* AXFMineWalletView.m in Sources */,
 				926E516C1DABC87A006DF3EA /* NSArray+CZAddition.m in Sources */,
 				926E51701DABC87A006DF3EA /* UIButton+CZAddition.m in Sources */,
 				926E51741DABC87A006DF3EA /* UIView+CZAddition.m in Sources */,
-				926E517C1DABEDEE006DF3EA /* AXFHomeHeaderView.m in Sources */,
+				18166DA71DAD035A005A09E7 /* AXFSlideFlowLayout.m in Sources */,
 				926E516F1DABC87A006DF3EA /* NSObject+CZAddition.m in Sources */,
 				FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */,
 				FDE586801DABCC53004C48C2 /* AXFTabBarController.m in Sources */,
 				926E51721DABC87A006DF3EA /* UILabel+CZAddition.m in Sources */,
-				926E51801DAC042C006DF3EA /* AXFMineView.m in Sources */,
+				FD200DBE1DACB0E7009587A8 /* AXFRunPlayView.m in Sources */,
+				18166DA51DAD035A005A09E7 /* AXFSlideCell.m in Sources */,
+				FD200DAC1DACAEBC009587A8 /* AXFSignatureCell.m in Sources */,
 				926E516D1DABC87A006DF3EA /* NSArray+Log.m in Sources */,
-				926E51791DABED01006DF3EA /* AXFHomeView.m in Sources */,
 				FDE586831DABCF16004C48C2 /* AXFHomeController.m in Sources */,
 				FDE5867D1DABCC3A004C48C2 /* AXFNavigationController.m in Sources */,
+				FD200DA91DACAE95009587A8 /* AXFFreshToHomeCell.m in Sources */,
 				FDBC03BB1DABA69200F11C39 /* main.m in Sources */,
 				926E51751DABC87A006DF3EA /* UIViewController+CZAddition.m in Sources */,
 				926E51731DABC87A006DF3EA /* UIScreen+CZAddition.m in Sources */,
+				18166DA61DAD035A005A09E7 /* AXFSlideCollectionViewCell.m in Sources */,
 				FD13DFA21DABD67A00E00C5B /* AXFMineController.m in Sources */,
+				FD200DB91DACAFD1009587A8 /* AXFHomeView.m in Sources */,
 				FDE586751DABC7CB004C48C2 /* NetworkTool.m in Sources */,
+				926E520B1DAD03A9006DF3EA /* AXFMineTopView.m in Sources */,
+				926E52081DAD0398006DF3EA /* AXFMineOthersFunctionView.m in Sources */,
+				FD200DBA1DACAFD1009587A8 /* AXFTableHeaderView.m in Sources */,
+				FD200DA61DACAE68009587A8 /* AXFFoodCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +962,8 @@
 		FDBC03EA1DABA69200F11C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ./AiXianFeng/PrefixHeader.pch;
 				INFOPLIST_FILE = AiXianFengUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -834,6 +976,8 @@
 		FDBC03EB1DABA69200F11C39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ./AiXianFeng/PrefixHeader.pch;
 				INFOPLIST_FILE = AiXianFengUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
