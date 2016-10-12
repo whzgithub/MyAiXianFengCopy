@@ -39,9 +39,18 @@
     AXFTableHeaderView *tableHeaderView = [[AXFTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, 375, 200)];
     tableHeaderView.backgroundColor = [UIColor purpleColor];
     tableView.tableHeaderView = tableHeaderView;
-    
+    // 轮播图片传值
+    tableHeaderView.imageArray = [self loadImagesData];
 }
-
+// 轮播图片数据加载
+- (NSArray *)loadImagesData {
+    NSMutableArray *arrM = [NSMutableArray array];
+    for (NSInteger i = 0; i <4; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"Home_Scroll_%02zd", i + 1];
+        [arrM addObject:[UIImage imageNamed:imageName]];
+    }
+    return arrM;
+}
 # pragma mark - 数据源方法
 // 数据源方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

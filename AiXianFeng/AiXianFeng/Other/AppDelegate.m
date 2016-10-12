@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AXFTabBarController.h"
+#import "AXFGuideController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    AXFTabBarController *tabVC = [[AXFTabBarController alloc]init];
+    AXFGuideController *guideVC = [[AXFGuideController alloc]init];
     
-    _window.rootViewController = tabVC;
+    _window.rootViewController = guideVC;
     
     [_window makeKeyAndVisible];
     

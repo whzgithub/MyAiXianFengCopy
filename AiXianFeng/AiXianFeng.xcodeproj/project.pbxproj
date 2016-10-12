@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0497475F1DAD62B200C834D4 /* AXFFreshToHomeViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497475E1DAD62B200C834D4 /* AXFFreshToHomeViews.m */; };
 		18166DA51DAD035A005A09E7 /* AXFSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA01DAD035A005A09E7 /* AXFSlideCell.m */; };
 		18166DA61DAD035A005A09E7 /* AXFSlideCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA21DAD035A005A09E7 /* AXFSlideCollectionViewCell.m */; };
 		18166DA71DAD035A005A09E7 /* AXFSlideFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18166DA41DAD035A005A09E7 /* AXFSlideFlowLayout.m */; };
+		18D4D2051DADD5F30022E3B5 /* AXFCycleFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4D2021DADD5F30022E3B5 /* AXFCycleFlowLayout.m */; };
+		18D4D2061DADD5F30022E3B5 /* AXFCycleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4D2041DADD5F30022E3B5 /* AXFCycleViewCell.m */; };
 		40F998443F964B3B3AFD066C /* libPods-AiXianFeng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D575B1553EDC60EDBF774CC2 /* libPods-AiXianFeng.a */; };
 		926E516C1DABC87A006DF3EA /* NSArray+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E51581DABC87A006DF3EA /* NSArray+CZAddition.m */; };
 		926E516D1DABC87A006DF3EA /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E515A1DABC87A006DF3EA /* NSArray+Log.m */; };
@@ -26,6 +29,9 @@
 		926E52071DAD0398006DF3EA /* AXFMineWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E52021DAD0398006DF3EA /* AXFMineWalletView.m */; };
 		926E52081DAD0398006DF3EA /* AXFMineOthersFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E52041DAD0398006DF3EA /* AXFMineOthersFunctionView.m */; };
 		926E520B1DAD03A9006DF3EA /* AXFMineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E520A1DAD03A9006DF3EA /* AXFMineTopView.m */; };
+		92D928301DADE258006E6F79 /* AXFGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D9282F1DADE258006E6F79 /* AXFGuideView.m */; };
+		92D928331DADE265006E6F79 /* AXFGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D928321DADE265006E6F79 /* AXFGuideController.m */; };
+		92D928371DADE470006E6F79 /* AXFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D928361DADE470006E6F79 /* AXFTabBarController.m */; };
 		FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF981DABD65600E00C5B /* AXFMarketController.m */; };
 		FD13DF9C1DABD66200E00C5B /* AXFOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9B1DABD66200E00C5B /* AXFOrderController.m */; };
 		FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD13DF9E1DABD66F00E00C5B /* AXFShopCarController.m */; };
@@ -36,7 +42,6 @@
 		FD200DB21DACAEE7009587A8 /* AXFStoresCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB11DACAEE7009587A8 /* AXFStoresCell.m */; };
 		FD200DB91DACAFD1009587A8 /* AXFHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB61DACAFD1009587A8 /* AXFHomeView.m */; };
 		FD200DBA1DACAFD1009587A8 /* AXFTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DB81DACAFD1009587A8 /* AXFTableHeaderView.m */; };
-		FD200DBE1DACB0E7009587A8 /* AXFRunPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */; };
 		FDBC03BB1DABA69200F11C39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBC03BA1DABA69200F11C39 /* main.m */; };
 		FDBC03C41DABA69200F11C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBC03C21DABA69200F11C39 /* Main.storyboard */; };
 		FDBC03C61DABA69200F11C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBC03C51DABA69200F11C39 /* Assets.xcassets */; };
@@ -46,7 +51,6 @@
 		FDBC04041DABA7E900F11C39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBC03FE1DABA7E900F11C39 /* AppDelegate.m */; };
 		FDE586751DABC7CB004C48C2 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE586741DABC7CB004C48C2 /* NetworkTool.m */; };
 		FDE5867D1DABCC3A004C48C2 /* AXFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE5867C1DABCC3A004C48C2 /* AXFNavigationController.m */; };
-		FDE586801DABCC53004C48C2 /* AXFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE5867F1DABCC53004C48C2 /* AXFTabBarController.m */; };
 		FDE586831DABCF16004C48C2 /* AXFHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE586821DABCF16004C48C2 /* AXFHomeController.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0497475D1DAD62B200C834D4 /* AXFFreshToHomeViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFFreshToHomeViews.h; sourceTree = "<group>"; };
+		0497475E1DAD62B200C834D4 /* AXFFreshToHomeViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFFreshToHomeViews.m; sourceTree = "<group>"; };
 		18166D861DACCB60005A09E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18166D9F1DAD035A005A09E7 /* AXFSlideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSlideCell.h; sourceTree = "<group>"; };
 		18166DA01DAD035A005A09E7 /* AXFSlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideCell.m; sourceTree = "<group>"; };
@@ -75,6 +81,10 @@
 		18166DA21DAD035A005A09E7 /* AXFSlideCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideCollectionViewCell.m; sourceTree = "<group>"; };
 		18166DA31DAD035A005A09E7 /* AXFSlideFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFSlideFlowLayout.h; sourceTree = "<group>"; };
 		18166DA41DAD035A005A09E7 /* AXFSlideFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFSlideFlowLayout.m; sourceTree = "<group>"; };
+		18D4D2011DADD5F30022E3B5 /* AXFCycleFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFCycleFlowLayout.h; sourceTree = "<group>"; };
+		18D4D2021DADD5F30022E3B5 /* AXFCycleFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFCycleFlowLayout.m; sourceTree = "<group>"; };
+		18D4D2031DADD5F30022E3B5 /* AXFCycleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFCycleViewCell.h; sourceTree = "<group>"; };
+		18D4D2041DADD5F30022E3B5 /* AXFCycleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFCycleViewCell.m; sourceTree = "<group>"; };
 		33C05A920390A538BE79A1E8 /* Pods-AiXianFeng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiXianFeng.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiXianFeng/Pods-AiXianFeng.release.xcconfig"; sourceTree = "<group>"; };
 		4D5B842912A5B249C7CA51A1 /* Pods-AiXianFeng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiXianFeng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiXianFeng/Pods-AiXianFeng.debug.xcconfig"; sourceTree = "<group>"; };
 		926E51541DABC87A006DF3EA /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
@@ -108,6 +118,12 @@
 		926E52041DAD0398006DF3EA /* AXFMineOthersFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineOthersFunctionView.m; sourceTree = "<group>"; };
 		926E52091DAD03A9006DF3EA /* AXFMineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMineTopView.h; sourceTree = "<group>"; };
 		926E520A1DAD03A9006DF3EA /* AXFMineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMineTopView.m; sourceTree = "<group>"; };
+		92D9282E1DADE258006E6F79 /* AXFGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFGuideView.h; sourceTree = "<group>"; };
+		92D9282F1DADE258006E6F79 /* AXFGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFGuideView.m; sourceTree = "<group>"; };
+		92D928311DADE265006E6F79 /* AXFGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFGuideController.h; sourceTree = "<group>"; };
+		92D928321DADE265006E6F79 /* AXFGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFGuideController.m; sourceTree = "<group>"; };
+		92D928351DADE470006E6F79 /* AXFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFTabBarController.h; sourceTree = "<group>"; };
+		92D928361DADE470006E6F79 /* AXFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFTabBarController.m; sourceTree = "<group>"; };
 		D575B1553EDC60EDBF774CC2 /* libPods-AiXianFeng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AiXianFeng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD13DF971DABD65600E00C5B /* AXFMarketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFMarketController.h; sourceTree = "<group>"; };
 		FD13DF981DABD65600E00C5B /* AXFMarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFMarketController.m; sourceTree = "<group>"; };
@@ -129,8 +145,6 @@
 		FD200DB61DACAFD1009587A8 /* AXFHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeView.m; sourceTree = "<group>"; };
 		FD200DB71DACAFD1009587A8 /* AXFTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFTableHeaderView.h; sourceTree = "<group>"; };
 		FD200DB81DACAFD1009587A8 /* AXFTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFTableHeaderView.m; sourceTree = "<group>"; };
-		FD200DBC1DACB0E7009587A8 /* AXFRunPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFRunPlayView.h; sourceTree = "<group>"; };
-		FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFRunPlayView.m; sourceTree = "<group>"; };
 		FDBC03B61DABA69200F11C39 /* AiXianFeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiXianFeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBC03BA1DABA69200F11C39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FDBC03C31DABA69200F11C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,8 +163,6 @@
 		FDE586741DABC7CB004C48C2 /* NetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
 		FDE5867B1DABCC3A004C48C2 /* AXFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFNavigationController.h; sourceTree = "<group>"; };
 		FDE5867C1DABCC3A004C48C2 /* AXFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFNavigationController.m; sourceTree = "<group>"; };
-		FDE5867E1DABCC53004C48C2 /* AXFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFTabBarController.h; sourceTree = "<group>"; };
-		FDE5867F1DABCC53004C48C2 /* AXFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFTabBarController.m; sourceTree = "<group>"; };
 		FDE586811DABCF16004C48C2 /* AXFHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXFHomeController.h; sourceTree = "<group>"; };
 		FDE586821DABCF16004C48C2 /* AXFHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXFHomeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,10 +199,10 @@
 				FD200DB41DACAFD1009587A8 /* HomeView(llz) */,
 				FD200DBB1DACB030009587A8 /* RunPlay(zhb) */,
 				FD200DA11DACAE4F009587A8 /* SignatureCell(lxf) */,
-				FD200DA21DACAE4F009587A8 /* SlideCell(llz) */,
 				FD200DA31DACAE4F009587A8 /* StoresCell(hxx) */,
-				FD200DA01DACAE4F009587A8 /* FreshToHomeCell(tol) */,
+				FD200DA21DACAE4F009587A8 /* SlideCell(llz) */,
 				FD200D9F1DACAE4F009587A8 /* FoodCell(whz) */,
+				FD200DA01DACAE4F009587A8 /* FreshToHomeCell(tol) */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +269,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		92D9282D1DADE231006E6F79 /* Guide(引导页) */ = {
+			isa = PBXGroup;
+			children = (
+				92D9282E1DADE258006E6F79 /* AXFGuideView.h */,
+				92D9282F1DADE258006E6F79 /* AXFGuideView.m */,
+			);
+			name = "Guide(引导页)";
+			path = AiXianFeng/Guide;
+			sourceTree = "<group>";
+		};
+		92D928341DADE470006E6F79 /* tabBarViewController_Backup */ = {
+			isa = PBXGroup;
+			children = (
+				92D928351DADE470006E6F79 /* AXFTabBarController.h */,
+				92D928361DADE470006E6F79 /* AXFTabBarController.m */,
+			);
+			path = tabBarViewController_Backup;
+			sourceTree = "<group>";
+		};
 		FD200D9F1DACAE4F009587A8 /* FoodCell(whz) */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +303,8 @@
 			children = (
 				FD200DA71DACAE95009587A8 /* AXFFreshToHomeCell.h */,
 				FD200DA81DACAE95009587A8 /* AXFFreshToHomeCell.m */,
+				0497475D1DAD62B200C834D4 /* AXFFreshToHomeViews.h */,
+				0497475E1DAD62B200C834D4 /* AXFFreshToHomeViews.m */,
 			);
 			name = "FreshToHomeCell(tol)";
 			path = FreshToHomeCell;
@@ -326,8 +359,10 @@
 		FD200DBB1DACB030009587A8 /* RunPlay(zhb) */ = {
 			isa = PBXGroup;
 			children = (
-				FD200DBC1DACB0E7009587A8 /* AXFRunPlayView.h */,
-				FD200DBD1DACB0E7009587A8 /* AXFRunPlayView.m */,
+				18D4D2011DADD5F30022E3B5 /* AXFCycleFlowLayout.h */,
+				18D4D2021DADD5F30022E3B5 /* AXFCycleFlowLayout.m */,
+				18D4D2031DADD5F30022E3B5 /* AXFCycleViewCell.h */,
+				18D4D2041DADD5F30022E3B5 /* AXFCycleViewCell.m */,
 			);
 			name = "RunPlay(zhb)";
 			path = RunPlay;
@@ -346,14 +381,15 @@
 			isa = PBXGroup;
 			children = (
 				FDBC04031DABA7E900F11C39 /* Tools(工具类) */,
+				FD5E9CC71DACBF6F000BF78D /* Headers(头文件) */,
+				FDBC03FC1DABA7E900F11C39 /* Other */,
 				FDE586761DABCBCB004C48C2 /* Main(根导航) */,
+				92D9282D1DADE231006E6F79 /* Guide(引导页) */,
 				FDBC03EC1DABA7E900F11C39 /* Home(首页) */,
 				FDBC03F01DABA7E900F11C39 /* Market(闪送超市) */,
 				FDBC03F81DABA7E900F11C39 /* Order(新鲜预定) */,
 				FDBC03FF1DABA7E900F11C39 /* ShopCar(购物车) */,
 				FDBC03F41DABA7E900F11C39 /* Mine(我的) */,
-				FDBC03FC1DABA7E900F11C39 /* Other */,
-				FD5E9CC71DACBF6F000BF78D /* Headers(头文件) */,
 				FDBC03B81DABA69200F11C39 /* AiXianFeng */,
 				FDBC03D21DABA69200F11C39 /* AiXianFengTests */,
 				FDBC03DD1DABA69200F11C39 /* AiXianFengUITests */,
@@ -400,7 +436,7 @@
 				FDBC03D51DABA69200F11C39 /* Info.plist */,
 			);
 			path = AiXianFengTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		FDBC03DD1DABA69200F11C39 /* AiXianFengUITests */ = {
 			isa = PBXGroup;
@@ -535,6 +571,7 @@
 		FDE586761DABCBCB004C48C2 /* Main(根导航) */ = {
 			isa = PBXGroup;
 			children = (
+				92D928341DADE470006E6F79 /* tabBarViewController_Backup */,
 				FDE586771DABCBCB004C48C2 /* Controller */,
 			);
 			name = "Main(根导航)";
@@ -544,10 +581,10 @@
 		FDE586771DABCBCB004C48C2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				92D928311DADE265006E6F79 /* AXFGuideController.h */,
+				92D928321DADE265006E6F79 /* AXFGuideController.m */,
 				FDE5867B1DABCC3A004C48C2 /* AXFNavigationController.h */,
 				FDE5867C1DABCC3A004C48C2 /* AXFNavigationController.m */,
-				FDE5867E1DABCC53004C48C2 /* AXFTabBarController.h */,
-				FDE5867F1DABCC53004C48C2 /* AXFTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -742,22 +779,26 @@
 				926E516E1DABC87A006DF3EA /* NSAttributedString+CZAdditon.m in Sources */,
 				FD13DF991DABD65600E00C5B /* AXFMarketController.m in Sources */,
 				FD200DB21DACAEE7009587A8 /* AXFStoresCell.m in Sources */,
+				92D928331DADE265006E6F79 /* AXFGuideController.m in Sources */,
 				926E52071DAD0398006DF3EA /* AXFMineWalletView.m in Sources */,
 				926E516C1DABC87A006DF3EA /* NSArray+CZAddition.m in Sources */,
 				926E51701DABC87A006DF3EA /* UIButton+CZAddition.m in Sources */,
+				18D4D2061DADD5F30022E3B5 /* AXFCycleViewCell.m in Sources */,
+				92D928371DADE470006E6F79 /* AXFTabBarController.m in Sources */,
 				926E51741DABC87A006DF3EA /* UIView+CZAddition.m in Sources */,
 				18166DA71DAD035A005A09E7 /* AXFSlideFlowLayout.m in Sources */,
+				0497475F1DAD62B200C834D4 /* AXFFreshToHomeViews.m in Sources */,
 				926E516F1DABC87A006DF3EA /* NSObject+CZAddition.m in Sources */,
 				FD13DF9F1DABD66F00E00C5B /* AXFShopCarController.m in Sources */,
-				FDE586801DABCC53004C48C2 /* AXFTabBarController.m in Sources */,
 				926E51721DABC87A006DF3EA /* UILabel+CZAddition.m in Sources */,
-				FD200DBE1DACB0E7009587A8 /* AXFRunPlayView.m in Sources */,
 				18166DA51DAD035A005A09E7 /* AXFSlideCell.m in Sources */,
 				FD200DAC1DACAEBC009587A8 /* AXFSignatureCell.m in Sources */,
 				926E516D1DABC87A006DF3EA /* NSArray+Log.m in Sources */,
 				FDE586831DABCF16004C48C2 /* AXFHomeController.m in Sources */,
 				FDE5867D1DABCC3A004C48C2 /* AXFNavigationController.m in Sources */,
 				FD200DA91DACAE95009587A8 /* AXFFreshToHomeCell.m in Sources */,
+				92D928301DADE258006E6F79 /* AXFGuideView.m in Sources */,
+				18D4D2051DADD5F30022E3B5 /* AXFCycleFlowLayout.m in Sources */,
 				FDBC03BB1DABA69200F11C39 /* main.m in Sources */,
 				926E51751DABC87A006DF3EA /* UIViewController+CZAddition.m in Sources */,
 				926E51731DABC87A006DF3EA /* UIScreen+CZAddition.m in Sources */,
