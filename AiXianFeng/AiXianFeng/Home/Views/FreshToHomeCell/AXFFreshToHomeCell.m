@@ -108,8 +108,7 @@
         make.top.equalTo(btn2.mas_bottom);
         
     }];
-    
-    
-    
 }
+
+@end
 
