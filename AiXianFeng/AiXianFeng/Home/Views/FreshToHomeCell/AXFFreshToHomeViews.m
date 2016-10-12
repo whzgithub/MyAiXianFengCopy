@@ -35,11 +35,17 @@
     
     
     // 3.实物图片
-    UIImageView * image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bianlibian5"]];
-    [self addSubview:image];
+    UIButton* btns = [[UIButton alloc]init];
+    //  设置按钮的背景图片
+    [btns setBackgroundImage:[UIImage imageNamed:@"20160114110732_538131.jpg@!goods_recom"] forState:UIControlStateNormal];
     
-    [image mas_makeConstraints:^(MASConstraintMaker *make) {
+    btns.contentMode = UIViewContentModeCenter;
+    
+    [self addSubview:btns];
+    
+    [btns mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self);
+        make.width.mas_equalTo(([UIScreen mainScreen].bounds.size.width - 20) / 3);
         
     }];
     
@@ -47,7 +53,7 @@
     // 2.名称
     UILabel *nameL = [[UILabel alloc]init];
     nameL.text = @"[次日达]进口牛油果";
-    nameL.font = [UIFont systemFontOfSize:12];
+    nameL.font = [UIFont systemFontOfSize:10];
     nameL.textColor = [UIColor blackColor];
     [self addSubview:nameL];
     
@@ -55,8 +61,8 @@
     [nameL mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.equalTo(self);
-        make.top.equalTo(image.mas_bottom);
-        make.right.equalTo(image);
+        make.top.equalTo(btns.mas_bottom);
+        make.right.equalTo(btns);
         
     }];
     
@@ -72,13 +78,13 @@
         
         make.left.equalTo(self);
         make.top.equalTo(nameL.mas_bottom);
-        make.right.equalTo(image);
+        make.right.equalTo(btns);
     }];
     
     //     2.容量
     UILabel *nameL2 = [[UILabel alloc]init];
     nameL2.text = @"560-720/4粒";
-    nameL2.font = [UIFont systemFontOfSize:14];
+    nameL2.font = [UIFont systemFontOfSize:12];
     nameL2.textColor = [UIColor lightGrayColor];
     [self addSubview:nameL2];
     
@@ -86,36 +92,34 @@
         
         make.left.equalTo(self);
         make.top.equalTo(nameL1.mas_bottom);
-        make.right.equalTo(image);
+        make.right.equalTo(btns);
     }];
     
     // 2.价格
-    UILabel *price = [[UILabel alloc]init];
+    UITextField *price = [[UITextField alloc]init];
     price.text = @"¥29.9";
-    price.font = [UIFont systemFontOfSize:14];
+    price.font = [UIFont systemFontOfSize:12];
     price.textColor = [UIColor redColor];
     price.textAlignment = NSTextAlignmentCenter;
     [self addSubview:price];
     
-    [price mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.left.equalTo(self);
-        make.top.equalTo(nameL2.mas_bottom).offset(8);
-        make.right.equalTo(image.mas_centerX);
-        
-    }];
     
     // 添加图片
     UIButton* btnimage = [[UIButton alloc]init];
-    [btnimage setBackgroundImage:[UIImage imageNamed:@"icon_food_increase_small_disable"] forState:UIControlStateNormal];
-    [btnimage sizeToFit];
+    
+    
+    [btnimage setImage:[UIImage imageNamed:@"v2_notice_dot"] forState:UIControlStateNormal];
+    btnimage.contentMode = UIViewContentModeCenter;
     [self addSubview:btnimage];
     
-    [btnimage mas_makeConstraints:^(MASConstraintMaker *make) {
+    NSArray* arr = @[price,btnimage];
+    
+    
+    [arr mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    [arr mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(price.mas_right);
-        make.top.equalTo(nameL2.mas_bottom).offset(6);
-        make.right.equalTo(image);
+        make.top.equalTo(nameL2.mas_bottom);
+        
     }];
     
     
