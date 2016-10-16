@@ -131,7 +131,9 @@
     
     // 4.给加载更多按钮添加约束
     [loadMoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(self);
+//        make.centerX.mas_equalTo(self);
+        make.bottom.equalTo(self.mas_bottom).offset(-20);
+        make.right.equalTo(self.mas_right).offset(-20);
     }];
 
     // 5.给加载更多按钮添加监听事件
@@ -193,7 +195,7 @@
     }
 }
 
-#warning mark - 以前没有AutoLayout时子控件的frame设置全部写在此方法中
+// 以前没有AutoLayout时子控件的frame设置全部写在此方法中
 //- (void)layoutSubviews {
 //    [super layoutSubviews];
 //    

@@ -8,6 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "AXFSignatureModel.h"
 @class AXFSignatureCell;
 
 //定义区分按钮的枚举
@@ -29,5 +30,8 @@ typedef enum :NSInteger
 @interface AXFSignatureCell : UITableViewCell
 //定义代理属性
 @property(nonatomic,weak)id<AXFSignatureCellDelegate>delegate;
+@property(nonatomic,copy) NSDictionary *dict;
+//@property(nonatomic,strong)AXFSignatureModel *signatureModel;
+@property(nonatomic,strong) NSArray *model;
 
 @end

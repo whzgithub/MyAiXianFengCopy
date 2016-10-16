@@ -8,7 +8,7 @@
 
 #import "AXFNavigationController.h"
 #import "UIColor+CZAddition.h"
-
+#import "AXFHomeController.h"
 @interface AXFNavigationController ()
 
 @end
@@ -28,7 +28,7 @@
     self.navigationBar.translucent = NO;
     
     // 设置导航条的背景颜色"包括状态栏后面的颜色也一起改了"
-    self.navigationBar.barTintColor = [UIColor cz_colorWithHex:0x1e82d2];
+    self.navigationBar.barTintColor = [UIColor orangeColor];
 
     self.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : [UIColor whiteColor]};
     
@@ -46,9 +46,10 @@
 
 #pragma mark - 重写此方法拦截到导航控制器的push操作在里面来判断是否要隐藏tabBar
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-
+    
     // 只要不是导航控制器的根控制器就让tabBar隐藏
     if (self.viewControllers.count > 0) {
+        
     // 隐藏那个控制器下面的tabBar就用那个控制器去调用下面这个方法
         viewController.hidesBottomBarWhenPushed = YES;
     }

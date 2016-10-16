@@ -5,11 +5,12 @@
 //  Created by Long on 16/10/11.
 //  Copyright © 2016年 LongChuang. All rights reserved.
 //
-
 #import "AXFSignatureCell.h"
-#import <Masonry.h>
+//#import <Masonry.h>
 
 @interface AXFSignatureCell ()
+//添加button的view
+//@property(nonatomic,weak) UIView *backView;
 @property(nonatomic,weak)UILabel *nameLabel;
 @property(nonatomic,weak) UIButton *btn;
 @property(nonatomic,weak) UIImageView *imgV;
@@ -18,22 +19,31 @@
 
 @implementation AXFSignatureCell
 
+
+
+//- (instancetype)initWithFrame:(CGRect)frame
+//{
+//    if (self = [super initWithFrame:frame]) {
+//        [self setupUI];
+//    }
+//    return self;
+//}
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupUI];
-        //        self.userInteractionEnabled = NO;
+        //使cell不能点击
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        //        self.isUserInteractionEnabled = NO;
     }
     return self;
 }
 - (void)setupUI
 {
-    UIButton *btn1 = [self loadSignatureBtnWithTitle:@"每日签到" andImageName:@"icon_dao_gray" andBtnNum :AXFSignatureBtnNum1];
-    UIButton *btn2 = [self loadSignatureBtnWithTitle:@"鲜货直供" andImageName:@"icon_dao_gray"andBtnNum :AXFSignatureBtnNum2];
-    UIButton *btn3 = [self loadSignatureBtnWithTitle:@"大闸蟹" andImageName:@"icon_dao_gray"andBtnNum :AXFSignatureBtnNum3];
-    UIButton *btn4 = [self loadSignatureBtnWithTitle:@"水果" andImageName:@"icon_dao_gray"andBtnNum :AXFSignatureBtnNum4];
+    UIButton *btn1 = [self loadSignatureBtnWithTitle:@"每日签到" andImageName:@"2016101209555373" andBtnNum :AXFSignatureBtnNum1];
+    UIButton *btn2 = [self loadSignatureBtnWithTitle:@"鲜货直供" andImageName:@"2016101209562328"andBtnNum :AXFSignatureBtnNum2];
+    UIButton *btn3 = [self loadSignatureBtnWithTitle:@"大闸蟹" andImageName:@"2016101209573587"andBtnNum :AXFSignatureBtnNum3];
+    UIButton *btn4 = [self loadSignatureBtnWithTitle:@"水果" andImageName:@"2016100709052814"andBtnNum :AXFSignatureBtnNum4];
     [self.contentView addSubview:btn1];
     [self.contentView addSubview:btn2];
     [self.contentView addSubview:btn3];
@@ -59,11 +69,7 @@
         make.right.offset(0);
     }];
 }
-#pragma mark - 按钮的点击方法
-- (void)btn1Click:(UIButton *)btn
-{
-    NSLog(@"我被点了一下");
-}
+
 //创建button的方法
 - (UIButton *)loadSignatureBtnWithTitle:(NSString *)title andImageName:(NSString *)imageName andBtnNum:(AXFSignatureBtn)btnNum
 {
@@ -75,28 +81,30 @@
     label.text = title;
     label.textAlignment =  NSTextAlignmentCenter;
     [label setFont:[UIFont systemFontOfSize:13]];
-    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+    UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [imageV sizeToFit];
+    imageV.image = [UIImage imageNamed:imageName];
+    
     self.imgV = imageV;
-    //    imageV.backgroundColor = [UIColor redColor];
     
     [btn addSubview:label];
     [btn addSubview:imageV];
     
     [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(btn.mas_centerX);
-        make.top.mas_equalTo(btn).offset(10);
+        make.top.mas_equalTo(btn).offset(8);
     }];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(btn.mas_centerX);
-        make.top.equalTo(imageV.mas_bottom).offset(10);
-        make.bottom.equalTo(btn.mas_bottom).offset(-10);
+        make.top.equalTo(imageV.mas_bottom).offset(8);
+        make.bottom.equalTo(btn.mas_bottom).offset(-8);
     }];
-    btn.backgroundColor = [UIColor redColor];
     [btn sizeToFit];
     //给每一个按钮设置tag
     btn.tag = btnNum;
     //给四个btn添加点击事件
     [btn addTarget:self action:@selector(signatureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
     return btn;
 }
 - (void)signatureBtnClick:(UIButton *)btn
@@ -107,4 +115,3 @@
 }
 
 @end
-

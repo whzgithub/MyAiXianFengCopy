@@ -14,8 +14,8 @@
 
 #import "MASonry.h"
 #import "CZAdditions.h"
-#import "UIColor+CZAddition"
-
+#import "UIColor+CZAddition.h"
+#import "UIImageView+WebCache.h"
 #endif
 
 // 主屏幕大小

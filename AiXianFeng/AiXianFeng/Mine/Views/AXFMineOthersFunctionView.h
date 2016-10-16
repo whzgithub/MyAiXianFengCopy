@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFMineOthersFunctionView : UIView
+@interface AXFMineOthersFunctionView : UIControl
+
+@property(nonatomic,assign)NSInteger index;
 
 @end

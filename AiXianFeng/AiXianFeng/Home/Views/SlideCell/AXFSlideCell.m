@@ -9,12 +9,14 @@
 #import "AXFSlideCell.h"
 #import "AXFSlideCollectionViewCell.h"
 #import "AXFSlideFlowLayout.h"
-#import <Masonry.h>
+#import "AXFact_rowsModel.h"
+#import "AXFActivityModel.h"
 
 static NSString *SlideCellID = @"SlideCellID";
 
-@interface AXFSlideCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface AXFSlideCell ()<UICollectionViewDataSource,UICollectionViewDelegate,AXFSlideCollectionViewCellDelegate>
 
+@property(nonatomic,strong)UICollectionView *collectionView;
 @end
 @implementation AXFSlideCell
 
@@ -23,31 +25,27 @@ static NSString *SlideCellID = @"SlideCellID";
     [self setupUI];
 }
 
-// 重写重用的方法，初始化控件
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setupUI];
-        self.imageList = @[@"0",@"1",@"2",@"0",@"1"];
-    }
-    return self;
-}
+
 
 // 重写图片地址数组的set方法
 -(void)setImageList:(NSArray *)imageList
 {
+
     _imageList = imageList;
-    
+    [self setupUI];
+    [self.collectionView reloadData];
 }
 
 // 初始化控件方法
 -(void)setupUI
 {
+    
     // 创建collection的流布局对象
     AXFSlideFlowLayout *flowLaout = [[AXFSlideFlowLayout alloc] init];
     // 创建UICollectionView对象，用Masonry自动布局设置frame
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.contentView.bounds collectionViewLayout:flowLaout];
-    
+    collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView = collectionView;
     // 设置代理和数据源
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -80,7 +78,17 @@ static NSString *SlideCellID = @"SlideCellID";
 {
     // 创建自定义cell
     AXFSlideCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SlideCellID forIndexPath:indexPath];
-    cell.imageURL = _imageList[indexPath.row];
+    cell.activityModel = _imageList[indexPath.row].activity;
+    cell.delegate = self;
     return cell;
+}
+
+// 数据传递代理方法
+-(void)slideCollectionViewCell:(AXFSlideCollectionViewCell *)cell  andActivityModel:(AXFActivityModel *)activityModel
+{
+    if ([self.delegate respondsToSelector:@selector(slideCell:andActivityModel:)]) {
+        [self.delegate slideCell:self andActivityModel:activityModel];
+    }
+    
 }
 @end

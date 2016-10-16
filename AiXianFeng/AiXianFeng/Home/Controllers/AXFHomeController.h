@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFHomeController : UIViewController
+@interface AXFHomeController : UITableViewController 
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFMineTopView : UIView
-
+@interface AXFMineTopView : UIControl
+@property(nonatomic,assign) NSInteger idx;
 @end

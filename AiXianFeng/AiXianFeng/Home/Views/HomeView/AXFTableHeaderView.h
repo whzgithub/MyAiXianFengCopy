@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SDCycleScrollView;
 @interface AXFTableHeaderView : UIView
-// 用来接收所有的广告图片
-@property (nonatomic, strong) NSArray *imageArray;
+@property(nonatomic,strong)SDCycleScrollView *cycleScrollView;
+@property(nonatomic,copy) NSArray* arr;
 @end

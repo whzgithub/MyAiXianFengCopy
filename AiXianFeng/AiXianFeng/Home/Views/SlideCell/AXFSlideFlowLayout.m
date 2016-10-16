@@ -14,7 +14,7 @@
     [super prepareLayout];
 
     // 设置最小列和行间距
-    self.minimumInteritemSpacing = 0;
+    self.minimumInteritemSpacing = 1;
     self.minimumLineSpacing = 1;
     self.itemSize = CGSizeMake(100, self.collectionView.bounds.size.height);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;

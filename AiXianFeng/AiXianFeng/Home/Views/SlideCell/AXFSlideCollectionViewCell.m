@@ -8,17 +8,34 @@
 
 #import "AXFSlideCollectionViewCell.h"
 #import <Masonry.h>
+#import "AXFWebViewController.h"
+#import "AXFActivityModel.h"
+#import <UIImageView+WebCache.h>
+
 @implementation AXFSlideCollectionViewCell
 
-// 重写图片地址属性赋值方法
--(void)setImageURL:(NSString *)imageURL
+-(void)setActivityModel:(AXFActivityModel *)activityModel
 {
-    // 创建图片框对象
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageURL]];
+    _activityModel = activityModel;
+    UIButton *btn = [[UIButton alloc] init];
+    UIImageView *imageView = [[UIImageView alloc] init];
+
+    [imageView sd_setImageWithURL:[NSURL URLWithString:activityModel.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_full_size"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        [btn setBackgroundImage:imageView.image forState:(UIControlStateNormal)];
+    }];
     // 添加到父控件，自动布局
-    [self.contentView addSubview:imageView];
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.contentView addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.contentView).offset(0);
     }];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)btnClick:(UIButton *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(slideCollectionViewCell:andActivityModel:)]) {
+        [self.delegate slideCollectionViewCell:self andActivityModel:self.activityModel];
+    }
 }
 @end

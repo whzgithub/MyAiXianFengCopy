@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFFreshToHomeCell : UITableViewCell
+@class AXFFreshToHomeCell,AXFcgoods_detailModel;
+@protocol XFFreshToHomeCellDelegate <NSObject>
 
+@optional
+/// cell中按钮1的跳转的控制器的代理方法
+- (void)axffreshToHomeCell:(AXFFreshToHomeCell*)cell;
+/// cell中按钮2的跳转的控制器的代理方法
+- (void)axffreshToHomeCell2:(AXFFreshToHomeCell*)cell;
+/// cell中按钮1的跳转的控制器的代理方法
+- (void)axffreshToHomeCell3:(AXFFreshToHomeCell*)cell;
+/// cell中按钮1的跳转的控制器的代理方法
+- (void)axffreshToHomeCell4:(AXFFreshToHomeCell*)cell;
+/// cell中按钮1的跳转的控制器的代理方法
+- (void)axffreshToHomeCell5:(AXFFreshToHomeCell*)cell;
+
+@end
+@interface AXFFreshToHomeCell : UITableViewCell
+// 设置代理
+@property (nonatomic, weak) id<XFFreshToHomeCellDelegate> delegate;
+//  模型属性
+@property (nonatomic, strong) AXFcgoods_detailModel* fgoodsModel;
 @end

@@ -40,18 +40,27 @@
     self.contentSize = CGSizeMake(0, mineOthersFunctionViewY+mineOthersFunctionViewH+145);
     self.scrollEnabled = YES;
     self.showsVerticalScrollIndicator = YES;
-    
-    // 自定义“我的”订单详情布局
-    AXFMineOrderView *mineOrderView = [[AXFMineOrderView alloc] initWithFrame:CGRectMake(0, lineH, [UIScreen mainScreen].bounds.size.width, mineOrderViewY)];
-    [self addSubview:mineOrderView];
 
     // 自定义“我的“我的钱包
     AXFMineWalletView *mineWalletView = [[AXFMineWalletView alloc] initWithFrame:CGRectMake(0, mineWalletViewY+lineH, [UIScreen mainScreen].bounds.size.width, mineOrderViewY)];
     [self addSubview:mineWalletView];
 
-    // 自定义“我的“我的钱包
+    // 自定义“我的“我的下面界面
     AXFMineOthersFunctionView *mineOthersFunctionView = [[AXFMineOthersFunctionView alloc] initWithFrame:CGRectMake(0, mineOthersFunctionViewY+lineH, [UIScreen mainScreen].bounds.size.width, mineOthersFunctionViewH)];
+    
+    [mineOthersFunctionView addTarget:self action:@selector(buttenClick4:) forControlEvents:UIControlEventValueChanged];
+    
     [self addSubview:mineOthersFunctionView];
 }
 
+
+-(void)buttenClick4:(AXFMineOthersFunctionView *)sender
+{
+    
+    if (self.ckBlock) {
+        self.ckBlock(sender);
+    }
+    
+    
+}
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShopCarAnimationViewController.h"
 
-@interface AXFMarketController : UIViewController
+@class AXFCategoriesModel,AXFMarketController;
+
+@interface AXFMarketController : ShopCarAnimationViewController
 
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFMineOrderView : UIView
+typedef enum : NSUInteger {
+    BtnOne,
+    BtnTwo,
+    BtnThree,
+    BtnFour
+} BtnNumber;
 
+@interface AXFMineOrderView : UIControl
+@property(nonatomic,assign)NSInteger idx;
 @end

@@ -18,8 +18,8 @@
     dispatch_once(&onceToken, ^{
         
         // 设置AFN的BaseURL
-        NSURL *baseURL = [NSURL URLWithString:@"http://c.m.163.com/nc/"];
-        instance = [[self alloc] initWithBaseURL:baseURL];
+//        NSURL *baseURL = [NSURL URLWithString:@"http://c.m.163.com/nc/"];
+        instance = [[self alloc] initWithBaseURL:nil];
         
         // 增加AFN支持的文件类型
         instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];

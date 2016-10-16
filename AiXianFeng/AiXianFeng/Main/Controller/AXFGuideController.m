@@ -10,9 +10,12 @@
 #import "AXFGuideView.h"
 #import "Masonry.h"
 #import "AXFNavigationController.h"
+#import "AXFWebViewController.h"
+
 
 // 图片个数
 #define KImageCount 4
+
 
 
 @implementation AXFGuideController
@@ -20,10 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     BOOL isNewVersion = YES;
-    
+   
     if (isNewVersion) {
         
         // 1.添加新特性
@@ -32,6 +35,39 @@
     
     // 2.跳转到主界面
     [self setupUI];
+}
+// 点击tabbarItem自动调用
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    NSInteger index = [self.tabBar.items indexOfObject:item];
+
+    [self animationWithIndex:index];
+
+    if([item.title isEqualToString:@"新鲜预定"])
+    {
+//        AXFWebViewController * vc = [[AXFWebViewController alloc] init];
+//        vc.urlString = @"http://www.topit.me/broad?type=search&k=%E7%BE%8E%E9%A3%9F";
+//        [self.viewControllers[2] pushViewController:vc animated:YES];
+    }
+
+}
+- (void)animationWithIndex:(NSInteger) index {
+    NSMutableArray * tabbarbuttonArray = [NSMutableArray array];
+    for (UIView *tabBarButton in self.tabBar.subviews) {
+        if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [tabbarbuttonArray addObject:tabBarButton];
+        }
+    }
+    CABasicAnimation*pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulse.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pulse.duration = 0.08;
+    pulse.repeatCount= 1;
+    pulse.autoreverses= YES;
+    pulse.fromValue= [NSNumber numberWithFloat:0.7];
+    pulse.toValue= [NSNumber numberWithFloat:1.3];
+    [[tabbarbuttonArray[index] layer]
+     addAnimation:pulse forKey:nil];
+ 
 }
 
 - (void) setupUI {
@@ -43,7 +79,7 @@
     
     UIViewController *vc3 = [self loadChildViewControllerWithClassName:@"AXFOrderController" andTitle:@"新鲜预定" andImageName:@"freshReservation"];
     
-    UIViewController *vc4 = [self loadChildViewControllerWithClassName:@"AXFShopCarController" andTitle:@"购物车" andImageName:@"shopCart"];
+    UIViewController *vc4 = [self loadChildViewControllerWithClassName:@"AXFCartController" andTitle:@"购物车" andImageName:@"shopCart"];
     
     UIViewController *vc5 = [self loadChildViewControllerWithClassName:@"AXFMineController" andTitle:@"我的" andImageName:@"v2_my"];
     
@@ -65,8 +101,7 @@
  @param imageName 标签栏上显示的图片
  */
 - (UIViewController *)loadChildViewControllerWithClassName:(NSString *)className andTitle:(NSString *)title andImageName:(NSString *)imageName {
-    
-    
+
     // 把类名的字符串转成类的类型
     Class class =  NSClassFromString(className);
     // 通过转换出来的类的类型来创建控制器
