@@ -30,7 +30,7 @@
     // 设置导航条的背景颜色"包括状态栏后面的颜色也一起改了"
     self.navigationBar.barTintColor = [UIColor orangeColor];
 
-    self.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:16], NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     // 设置导航条上的主题颜色
     self.navigationBar.tintColor = [UIColor whiteColor];

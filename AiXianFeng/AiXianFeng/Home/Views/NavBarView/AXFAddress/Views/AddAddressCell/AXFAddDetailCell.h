@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AXFAddDetailCell : UITableViewCell
+//详细地址
+@property(nonatomic,copy)NSString *detailName;
 
 @end

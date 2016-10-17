@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class AXFMineOthersFunctionView;
-
+@class AXFMineWalletView;
 @interface AXFMineScrollView : UIScrollView
 
 @property(nonatomic,copy)void(^ckBlock)(AXFMineOthersFunctionView *btn);
 
+@property(nonatomic,copy)void(^nkBlock)(AXFMineWalletView *btn1);
 @end

@@ -2,9 +2,9 @@
 //  JHUD.m
 //  JHudViewDemo
 //
-//  Created by 晋先森 on 16/7/11.
-//  Copyright © 2016年 晋先森. All rights reserved.
-//  https://github.com/jinxiansen
+//
+//  Created by Long on 16/10/10.
+//  Copyright © 2016年 LongChuang. All rights reserved.
 //
 
 #import "JHUD.h"

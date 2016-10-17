@@ -11,8 +11,6 @@
 @interface AXFCycleModel : NSObject
 //轮播图片
 @property(nonatomic,copy) NSString* img;
-@property(nonatomic,copy) NSString* name;
-@property(nonatomic,copy) NSDictionary* ext_params;
-@property(nonatomic,copy) NSString* trackid;
+
 
 @end

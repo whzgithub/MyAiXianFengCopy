@@ -29,10 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.title = @"loadingFailure";
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    // 建议基类中Lazy创建，进行二次封装，使用时直接调用，避免子类中频繁创建产生冗余代码的问题。
+    // 基类中Lazy创建，进行二次封装，使用时直接调用，避免子类中频繁创建产生冗余代码的问题。
     self.hudView = [[JHUD alloc]initWithFrame:self.view.bounds];
     
     [self loadingFailure];

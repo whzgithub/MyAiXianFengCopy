@@ -43,6 +43,7 @@
 
     // 自定义“我的“我的钱包
     AXFMineWalletView *mineWalletView = [[AXFMineWalletView alloc] initWithFrame:CGRectMake(0, mineWalletViewY+lineH, [UIScreen mainScreen].bounds.size.width, mineOrderViewY)];
+    [mineWalletView addTarget:self action:@selector(buttenClick5:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:mineWalletView];
 
     // 自定义“我的“我的下面界面
@@ -59,6 +60,15 @@
     
     if (self.ckBlock) {
         self.ckBlock(sender);
+    }
+    
+    
+}
+-(void)buttenClick5:(AXFMineOthersFunctionView *)sender2
+{
+    
+    if (self.ckBlock) {
+        self.ckBlock(sender2);
     }
     
     

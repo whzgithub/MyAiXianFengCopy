@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AXFOrderController : UIViewController
-@property (nonatomic) NSString  *selName;
+//@property (nonatomic) NSString  *selName;
 @end

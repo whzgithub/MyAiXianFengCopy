@@ -52,6 +52,12 @@
         make.height.equalTo(self);
     }];
 }
+
+- (void)setDetailName:(NSString *)detailName
+{
+    _detailName = detailName;
+    self.detailTextField.text = detailName;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

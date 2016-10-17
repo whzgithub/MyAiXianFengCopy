@@ -35,6 +35,7 @@
     self.nameLabel = nameLabel;
     nameLabel.font = [UIFont systemFontOfSize:14];
     nameLabel.text = @"李晓飞";
+//    nameLabel.text = self.nameLabel.text;
     
     UILabel *phoneNumLabel = [[UILabel alloc] init];
     [self addSubview:phoneNumLabel];
@@ -86,6 +87,26 @@
     }];
     
 }
+//
+//- (void)setName:(NSString *)name{
+//    _name = name;
+//    self.nameLabel.text = name;
+//}
+//- (void)setPhoneNum:(NSString *)phoneNum
+//{
+//    _phoneNum= phoneNum;
+//    self.phoneNumLabel.text = phoneNum;
+//}
+//- (void)setDetail:(NSString *)detail
+//{
+//    _detail = detail;
+//    self.detailTextLabel.text = detail;
+//}
+
+
+
+
+
 - (void)writeBtnClick:(UIButton *)sender
 {
     if ([self.delegate respondsToSelector:@selector(addressOneTabelViewCell:)]) {

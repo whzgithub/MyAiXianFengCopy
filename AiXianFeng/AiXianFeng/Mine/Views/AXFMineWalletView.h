@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXFMineWalletView : UIView
+@interface AXFMineWalletView : UIControl
 
+@property(nonatomic,assign)NSInteger index;
 @end

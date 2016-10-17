@@ -21,6 +21,11 @@
 
 @property(nonatomic,strong) UISegmentedControl *segmentedC;
 @property(nonatomic,strong) UITableView *addressTable;
+
+@property(nonatomic,copy) NSString *name;
+@property(nonatomic,copy) NSString *phoneNum;
+@property( nonatomic,copy) NSString *address;
+
 @end
 
 @implementation AXFAddressViewController
@@ -47,8 +52,7 @@
 {
     AXFAddAddressController *addAddressVc = [[AXFAddAddressController alloc] init];
     [self.navigationController pushViewController:addAddressVc animated:YES];
-    
-}
+    }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (self.segmentedC.selectedSegmentIndex == 1 && section == 1) {
@@ -59,8 +63,14 @@
 
 - (void)addressOneCell:(AXFAddressOneCell *)cell
 {
-    AXFHomeController *VC = [[AXFHomeController alloc] init];
-    [self.navigationController pushViewController:VC animated:YES];
+//    AXFHomeController *VC = [[AXFHomeController alloc] init];
+//    [self.navigationController pushViewController:VC animated:YES];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"定位失败，请手动填写当前位置" preferredStyle:  UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定"style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert presentedViewController];
+    }]];
+    //弹出提示框；
+    [self presentViewController:alert animated:true completion:nil];
 }
 - (void)addressTwoCell:(AXFAddressTwoCell *)addressTwoCell
 {
@@ -77,12 +87,10 @@
     segmentedC.selectedSegmentIndex = 0;
     [segmentedC addTarget:self action:@selector(indexDidChangeForSegmentedControl:) forControlEvents:UIControlEventValueChanged];
     [self.navigationItem setTitleView: segmentedC];
-    
     //创建tableView
     UITableView *addressTabel = [[UITableView alloc] initWithFrame:CGRectNull style:UITableViewStyleGrouped];
     [self.view addSubview:addressTabel] ;
     self.addressTable = addressTabel;
-    
     
     addressTabel.delegate = self;
     addressTabel.dataSource = self;
@@ -149,6 +157,13 @@
 {
     AXFAddAddressController *AddAddressVC = [[AXFAddAddressController alloc] init];
     [self.navigationController pushViewController:AddAddressVC animated:YES];
+//    AddAddressVC.addAddressClick = ^(NSString*name, NSString *phoneNum,NSString *cityName,NSString *pretureName,NSString *detail){
+//        self.name = name;
+//        self.phoneNum = phoneNum;
+//        self.address = [NSString stringWithFormat:@"%@%@%@",cityName,pretureName,detail];
+//    };
+//   
+
 }
 #pragma mark - 数据源方法
 
@@ -183,6 +198,10 @@
         }else{
             AXFAddressOneTableViewCell *one_cell_table = [tableView dequeueReusableCellWithIdentifier:@"ADDRESS_ONETABEL_CELL"];
             one_cell_table.delegate = self;
+            one_cell_table.name =self.name;
+            one_cell_table.phoneNum = self.phoneNum;
+            one_cell_table.detail = self.address;
+            
             return one_cell_table;
         }
     }else{

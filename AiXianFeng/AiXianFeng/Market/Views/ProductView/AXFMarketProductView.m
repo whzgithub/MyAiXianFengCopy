@@ -35,7 +35,8 @@
 -(void)setAllIDModel:(AXFProductsModel *)allIDModel
 {
     _allIDModel = allIDModel;
-    self.IDModel = allIDModel.a;
+    //初始productTable显示内容
+    self.IDModel = allIDModel.l;
     self.dict = @{
                   @"103532" : allIDModel.a,
                   @"103536" : allIDModel.b,
@@ -114,6 +115,8 @@
     productTableView.rowHeight = 80;
     productTableView.tableHeaderView = BothView;
     self.productTableView = productTableView;
+    
+    
 }
 
 #pragma mark - 数据源方法

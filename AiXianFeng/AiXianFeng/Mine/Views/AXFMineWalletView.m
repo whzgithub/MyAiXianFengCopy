@@ -20,9 +20,16 @@
     return self;
 }
 
+-(void)buttenClick5:(UIButton *)btn2{
+    
+    self.index = btn2.tag;
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+    
+}
+
 - (void) setupUI {
     
-    //    self.backgroundColor = [UIColor whiteColor];
+ 
     UIView *money = [[UIView alloc] init];
     money.backgroundColor = [UIColor whiteColor];
     [self addSubview:money];
@@ -30,13 +37,12 @@
         
         make.top.mas_equalTo(3);
         make.bottom.mas_equalTo(-3);
-        //        make.left.right.equalTo(self);
+       
         make.width.offset(375);
     }];
     
     UIImageView *imgM = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"H63"]];
     [self addSubview:imgM];
-    imgM.backgroundColor = [UIColor redColor];
     [imgM mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(money);
@@ -50,21 +56,25 @@
     
     [self addSubview:btn1];
     [btn1 setBackgroundImage:[UIImage imageNamed:@"H51"] forState:UIControlStateNormal];
-    btn1.backgroundColor = [UIColor blueColor];
+    btn1.tag = 10;
+    [btn1 addTarget:self action:@selector(buttenClick5:) forControlEvents:UIControlEventTouchUpInside];
     
     
     UIButton *btn2 = [[UIButton alloc]init];
     
     [self addSubview:btn2];
     [btn2 setBackgroundImage:[UIImage imageNamed:@"H52"] forState:UIControlStateNormal];
-    btn2.backgroundColor = [UIColor blackColor];
+    btn2.tag = 11;
+    [btn2 addTarget:self action:@selector(buttenClick5:) forControlEvents:UIControlEventTouchUpInside];
     
     
     UIButton *btn3 = [[UIButton alloc]init];
     
     [self addSubview:btn3];
     [btn3 setBackgroundImage:[UIImage imageNamed:@"H53"] forState:UIControlStateNormal];
-    btn3.backgroundColor = [UIColor grayColor];
+    btn3.tag = 12;
+    [btn3 addTarget:self action:@selector(buttenClick5:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     NSArray *arrB = @[btn1,btn2,btn3];
     

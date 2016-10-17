@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>成长值</string>
+		<key>img</key>
+		<string>v1</string>
+		<key>content</key>
+		<string>会员等级的有效期为1年，1年后扣减响应等级成长值，剩余成长值从新计算会员等级。</string>
+	</dict>
+	<dict>
+		<key>content</key>
+		<string>会员等级越高获得的积分越多。</string>
+		<key>img</key>
+		<string>v2</string>
+		<key>title</key>
+		<string>成长攻略</string>
+	</dict>
+	<dict>
+		<key>content</key>
+		<string>注册会员送积分100，普通会员积分&gt;100，白银会员积分&gt;300，白金会员积分&gt;500，钻石会员积分&gt;600。</string>
+		<key>img</key>
+		<string>v3</string>
+		<key>title</key>
+		<string>特权</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>会员等级说明</string>
+		<key>img</key>
+		<string>v4</string>
+		<key>content</key>
+		<string>会员购买商品1，积分增加10。在天津，北京，上海，等一线城市购买商品额外送10积分。</string>
+	</dict>
+</array>
+</plist>

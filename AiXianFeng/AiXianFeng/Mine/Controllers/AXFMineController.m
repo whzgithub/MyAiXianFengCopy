@@ -20,6 +20,11 @@
 #import "AXFNewsViewController.h"
 #import "AXFTicklingHViewController.h"
 #import "AXFJoinViewController.h"
+#import "AXFVacanciesViewController.h"
+#import "AXFCouponViewController.h"
+#import "AXFHscoringViewController.h"
+#import "ViewController.h"
+#import "AXFSettingTabviewVC.h"
 
 @implementation AXFMineController{
     
@@ -77,9 +82,23 @@
             {AXFJoinViewController *vc = [[AXFJoinViewController alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];}
                 break;
+            case 10:
+            {AXFVacanciesViewController *vc = [[AXFVacanciesViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];}
+                break;
+            case 11:
+            {AXFCouponViewController *vc = [[AXFCouponViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];}
+                break;
+            case 12:
+            {AXFHscoringViewController *vc = [[AXFHscoringViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];}
+                break;
+
             default:
                 break;
         }
+        
 
     };
     // 自定义“我的”订单详情布局
@@ -104,9 +123,15 @@
         AXFShopCollectController* shopVc = [[AXFShopCollectController alloc] init];
         [self.navigationController pushViewController:shopVc animated:YES];
     }
-    else
+    else if (sender.idx == 6)
     {
-        AXFVipController* vipVc = [[AXFVipController alloc] init];
+        AXFSettingTabviewVC *settingVC = [[AXFSettingTabviewVC alloc]init];
+        settingVC.title = @"设置";
+        settingVC.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self.navigationController pushViewController:settingVC animated:YES];
+    }
+    else{
+        ViewController* vipVc = [[ViewController alloc] init];
         
         [self.navigationController pushViewController:vipVc animated:YES];
         

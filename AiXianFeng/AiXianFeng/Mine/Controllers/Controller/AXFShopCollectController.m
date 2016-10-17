@@ -19,6 +19,8 @@
     
       self.navigationItem.title = @"商品店铺";
     
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
     // 创建lebel
     
     UILabel* label = [UILabel cz_labelWithText:@"还没有收藏商品哦" fontSize:15 color:[UIColor grayColor]];

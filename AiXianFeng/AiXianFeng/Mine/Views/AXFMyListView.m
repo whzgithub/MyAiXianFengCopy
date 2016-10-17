@@ -31,20 +31,20 @@
 
 - (void)setupUI
 {
-    // MARK: - 1.添加3个按钮
-    // 1.确定按钮标题
+    // 添加3个按钮
+    // 确定按钮标题
     NSArray<NSString *> *titlesArr = @[@"全部订单", @"待付款", @"待收货", @"待评价"];
     
-    // 2.遍历创建按钮
+    // 遍历创建按钮
     [titlesArr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        // 2.1 创建按钮
+        // 创建按钮
         UIButton *btn = [UIButton cz_textButton:obj fontSize:14 normalColor:[UIColor cz_colorWithHex:0x555555] selectedColor:[UIColor redColor]];
         
-        // 2.2 添加按钮监听事件
+        // 添加按钮监听事件
         [btn addTarget:self action:@selector(categoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
-        // 2.3 如果是第0个按钮,设置个初始选中状态,记得赋值!
+        // 如果是第0个按钮,设置个初始选中状态,记得赋值!
         if (idx == 0) {
             btn.selected = YES;
             _selectedBtn = btn;
@@ -55,7 +55,7 @@
         
     }];
     
-    // 3.布局按钮的约束
+    // 布局按钮的约束
     [self.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     [self.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -63,11 +63,11 @@
         
     }];
     
-    // 4.赋值,记录3个按钮
+    // 赋值,记录3个按钮
     _btnsArr = self.subviews;
     
-    // MARK: - 2.添加红线的线条
-    // 1.创建视图 红线
+    // 添加红线的线条
+    // 创建视图 红线
     UIView *redL = [[UIView alloc] init];
     redL.backgroundColor = [UIColor redColor];
     
@@ -81,7 +81,7 @@
         
     }];
     
-    // 2.记录成员变量
+    // 记录成员变量
     _redLine = redL;
     
 }
@@ -110,28 +110,26 @@
     
     _offset_X = offset_X;
     
-    // MARK: - 1.更新黄线约束
+    // 更新黄线约束
     
-    // 1.更新红线的约束,中心的x值
+    // 更新红线的约束,中心的x值
     [_redLine mas_updateConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(_btnsArr[0]).offset(offset_X);
         
     }];
     
-    // 2.强制布局子控件
-// - newMethod 需要通过动画修改布局时,给layoutIfNeed添加动画代码!
+    // 强制布局子控件
     [UIView animateWithDuration:.3 animations:^{
         
         [self layoutIfNeeded];
     }];
     
-    // MARK: - 2.修改按钮的状态!
-    // 1.计算通过偏移量得出对应的索引值
+    // 修改按钮的状态!
+    // 计算通过偏移量得出对应的索引值
     NSInteger idx = offset_X / _btnsArr[0].bounds.size.width + 0.5;
-//    NSLog(@"%zd", idx); // 1 ~ 1.9   + 0.5  1.5
     
-    // 2.修改按钮的状态
+    // 修改按钮的状态
     // - 取消之前的
     _selectedBtn.selected = NO;
     // - 设置当前的

@@ -25,7 +25,6 @@
 
 - (void) setupUI {
     
-    //    self.backgroundColor = [UIColor whiteColor];
     UIView *money = [[UIView alloc] init];
     money.backgroundColor = [UIColor whiteColor];
     [self addSubview:money];
@@ -33,7 +32,6 @@
         
         make.top.mas_equalTo(3);
         make.bottom.mas_equalTo(-3);
-        //        make.left.right.equalTo(self);
         make.width.offset(375);
     }];
     
@@ -142,7 +140,7 @@
     btn.titleLabel.numberOfLines = 0;
     // 设置按钮中label文字局中
     btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    //    scan.frame = CGRectMake(0, 0, 93, 113);
+    
     [self addSubview:btn];
     
     // 给每一个按钮设置tag
@@ -156,11 +154,12 @@
 - (void)categoryBtnClick:(UIButton *)sender {
     
     
-    // 1.获取按钮所在集合中的索引
+    // 获取按钮所在集合中的索引
     NSInteger idx = [_btnAll indexOfObject:sender];
+    
     _idx = idx;
     
-    // 2.发送事件,让scrollView滚动!
+    // 发送事件,让scrollView滚动!
     [self sendActionsForControlEvents:UIControlEventValueChanged];
     
     

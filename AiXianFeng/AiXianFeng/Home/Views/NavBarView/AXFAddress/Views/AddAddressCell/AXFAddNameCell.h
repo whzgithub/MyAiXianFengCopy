@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AXFAddNameCell : UITableViewCell
+//姓名
+@property(nonatomic,copy) NSString *name;
 
 @end

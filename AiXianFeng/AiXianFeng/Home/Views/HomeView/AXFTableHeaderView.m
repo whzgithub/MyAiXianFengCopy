@@ -10,7 +10,9 @@
 #import "SDCycleScrollView.h"
 #import "AXFCycleModel.h"
 @interface AXFTableHeaderView ()<SDCycleScrollViewDelegate>
+// 模型数组
 @property(nonatomic,copy) NSArray* Lists;
+
 @end
 @implementation AXFTableHeaderView
 

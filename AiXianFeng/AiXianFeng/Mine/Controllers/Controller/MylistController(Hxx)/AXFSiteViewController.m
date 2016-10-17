@@ -7,6 +7,7 @@
 //
 
 #import "AXFSiteViewController.h"
+#import "AXFAddAddressController.h"
 
 @interface AXFSiteViewController ()
 
@@ -47,20 +48,21 @@
         make.right.equalTo(viewT).offset(-90);
         
     }];
+    [btn1 addTarget:self action:@selector(btn1Click:) forControlEvents:UIControlEventTouchUpInside];
     
     UIImageView *image1 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"H106"]];
     
     [self.view addSubview:image1];
     
     [image1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        
         make.left.offset(30);
         make.top.offset(40);
- 
-        
     }];
-
-    
+}
+//点击添加地址按钮的方法
+- (void)btn1Click:(UIButton *)sender
+{
+    [self.navigationController pushViewController:[[AXFAddAddressController alloc] init] animated:YES];
 }
 
 @end

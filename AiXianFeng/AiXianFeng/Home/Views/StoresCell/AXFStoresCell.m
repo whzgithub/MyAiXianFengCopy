@@ -135,7 +135,6 @@
     [view addSubview:bg1];
     [bg1 setBackgroundImage:[UIImage imageNamed:@"v2_placeholder_full_size"] forState:UIControlStateNormal];
     
-//    UIButton *bg2 = [[UIButton alloc]init];
     UIButton *bg2 = [self loadHomeTopBtnWithTitle:@""andImageName:@"v2_placeholder_full_size" andBtnType:AXFStoresViewBtnTypeSecond];
     
     [view addSubview:bg2];
@@ -152,27 +151,21 @@
         
     }];
     
-//    UIButton *bg3 = [[UIButton alloc]init];
     UIButton *bg3 = [self loadHomeTopBtnWithTitle:@""andImageName:@"H15" andBtnType:AXFStoresViewBtnTypeThird];
     
     [view addSubview:bg3];
     [bg3 setBackgroundImage:[UIImage imageNamed:@"H15"] forState:UIControlStateNormal];
    
     
-//    UIButton *bg4 = [[UIButton alloc]init];
     UIButton *bg4 = [self loadHomeTopBtnWithTitle:@""andImageName:@"H5" andBtnType:AXFStoresViewBtnTypeFourth];
     
     [view addSubview:bg4];
     [bg4 setBackgroundImage:[UIImage imageNamed:@"H5"] forState:UIControlStateNormal];
     
-//    UIButton *bg5 = [[UIButton alloc]init];
     UIButton *bg5 = [self loadHomeTopBtnWithTitle:@""andImageName:@"H6" andBtnType:AXFStoresViewBtnTypeFive];
     
     [view addSubview:bg5];
     [bg5 setBackgroundImage:[UIImage imageNamed:@"H6"] forState:UIControlStateNormal];
-    
-    
-//    UIButton *bg6 = [[UIButton alloc]init];
     
     UIButton *bg6 = [self loadHomeTopBtnWithTitle:@""andImageName:@"H7" andBtnType:AXFStoresViewBtnTypeSix];
 
@@ -222,7 +215,7 @@
 
 -(UIButton *)loadHomeTopBtnWithTitle:(NSString *)title andImageName:(NSString *)imageName andBtnType:(AXFStoresViewBtnType)btnType
 {
-    //创建按钮
+    //创建按钮 
     UIButton *btn = [[UIButton alloc]init];
     
     [self addSubview:btn];
@@ -238,17 +231,12 @@
 
 - (void)homeTopBtnClick:(UIButton *)btn {
     
-    
-    
-    // 当按钮点击之后去通知代理干活
-    // 判断代理方有没有实现协议方法,实现之后再去通知
-//    NSLog(@"我被点了一下");
-    
-    if ([self.delegate respondsToSelector:@selector(homeTopView:andButtonType:)]) {
-        
-        [self.delegate homeTopView:self andButtonType:btn.tag];
-        
+    if (self.btnBlock) {
+        self.btnBlock(btn);
     }
+    
+
+    
 }
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "AXFAddCityCell.h"
-
 @interface AXFAddCityCell ()
 @property(nonatomic,strong)UITextField *cityTextField;
 
@@ -23,6 +22,9 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupUI];
+        self.selectionStyle= UITableViewCellSelectionStyleNone;
+        [self.cityTextField resignFirstResponder];
+        
     }
     return self;
 }
@@ -37,7 +39,9 @@
     [self.contentView addSubview:cityTextField];
     cityTextField.placeholder = @"请选择城市";
     self.cityTextField = cityTextField;
+    cityTextField.userInteractionEnabled = YES;
     cityTextField.font = [UIFont systemFontOfSize:14];
+    cityTextField.keyboardType = UIKeyboardTypeTwitter;
     //    nameTextField.textAlignment = NSTextAlignmentLeft;
     [cityLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
@@ -51,7 +55,23 @@
         make.right.offset(0);
         make.height.equalTo(self);
     }];
+    
+    //给textField添加一个点按手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapSender:)];
+    [cityTextField addGestureRecognizer:tap];
 
+}
+- (void)tapSender:(UITapGestureRecognizer*)sender
+{
+    if ([self.delegate respondsToSelector:@selector(addCityCell: textField:)]) {
+        [self.delegate addCityCell:self textField:self.cityTextField];
+    }
+}
+//重写cityname的set方法
+- (void)setCityName:(NSString *)cityName
+{
+    _cityName = cityName;
+    self.cityTextField.text = cityName;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -11,6 +11,7 @@
 
 @interface AXF_act_rows_hxx : NSObject
 
+//数组字段
 @property(nonatomic, strong)NSArray<AXF_act_rows2_hxx *> *act_rows;
 
 @end

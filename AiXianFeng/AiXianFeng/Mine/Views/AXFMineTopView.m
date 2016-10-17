@@ -175,7 +175,7 @@
  
     // 添加点击事件
     
-    NSArray* arrC = @[btn2,information,vip,vipLevel,btn3,btn4];
+    NSArray* arrC = @[btn2,information,vip,vipLevel,btn3,btn4,btn1];
     
     [arrC enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL * _Nonnull stop) {
         

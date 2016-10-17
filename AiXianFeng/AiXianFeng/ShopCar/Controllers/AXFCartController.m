@@ -149,11 +149,13 @@
     
     
     cell.addClick = ^(UIButton *btn){
+        [self animationWithIndex:3];
         NSInteger num = [self.tabBarItem.badgeValue integerValue];
         num ++;
         self.tabBarItem.badgeValue = @(num).description;
     };
     cell.cutClick = ^(UIButton *btn){
+         [self animationWithIndex:3];
         NSInteger num = [self.tabBarItem.badgeValue integerValue];
         num --;
         self.tabBarItem.badgeValue = @(num).description;
@@ -195,7 +197,7 @@
                 
                 if (self.tabBarItem.badgeValue.integerValue == 0) {
                     self.tabBarItem.badgeValue = nil;
-                    
+                    _myTableView.hidden = YES;
                 }
             }];
             ///MARK:系统样式弹出界面框提示取消
@@ -230,6 +232,30 @@
     return @"删除";
 }
 
+#pragma mark - 超市点击按钮加减对应购物车的动画
+/// 超市点击按钮加减对应购物车的动画
+- (void)animationWithIndex:(NSInteger) index {
+    
+    NSMutableArray * tabbarbuttonArray = [NSMutableArray array];
+    for (UIView *tabBarButton in self.tabBarController.tabBar.subviews) {
+        if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [tabbarbuttonArray addObject:tabBarButton];
+        }
+    }
+    CABasicAnimation*pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulse.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pulse.duration = 0.08;
+    pulse.repeatCount= 1;
+    pulse.autoreverses= YES;
+    pulse.fromValue= [NSNumber numberWithFloat:0.7];
+    pulse.toValue= [NSNumber numberWithFloat:1.3];
+    [[tabbarbuttonArray[index] layer]
+     addAnimation:pulse forKey:nil];
+    
+}
+
+
+
 #pragma 左侧活动点击删除
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -256,6 +282,7 @@
             
             if (self.tabBarItem.badgeValue.integerValue == 0) {
                 self.tabBarItem.badgeValue = nil;
+                _myTableView.hidden = YES;
                 
             }
         }];

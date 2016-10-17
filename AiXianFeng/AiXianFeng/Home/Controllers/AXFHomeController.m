@@ -33,9 +33,13 @@
 #import "AXFWebViewController.h"
 #import "AXFStoresViewController.h"
 #import "AXFAVPlayerController.h"
-
-
-@interface AXFHomeController ()<SDCycleScrollViewDelegate,AXFSignatureCellDelegate,AXFCommonHeaderViewDelegate,AXFSlideCellDelegate,MBProgressHUDDelegate,SDCycleScrollViewDelegate,AXFStoresCellDelegate>
+#import "AXFLocationManager.h"
+#import "AXFXianfengController.h"
+#import "AXFoneController.h"
+#import "AXFtwoViewController.h"
+#import "AXFMarketController.h"
+#import "AXFFruitController.h"
+@interface AXFHomeController ()<SDCycleScrollViewDelegate,AXFSignatureCellDelegate,AXFCommonHeaderViewDelegate,AXFSlideCellDelegate,MBProgressHUDDelegate,SDCycleScrollViewDelegate,XFFreshToHomeCellDelegate>
 
 @end
 @implementation AXFHomeController
@@ -65,8 +69,22 @@
         self.navigationController.navigationBar.translucent = YES;
     }
     [self addWaitIcon];
+    [self loadPosition];
 
 
+}
+- (void)loadPosition
+{
+        [[AXFLocationManager sharedAXFLocationManager] getCurrentLocation:^(CLLocation *location, CLPlacemark *placeMark, NSString *error) {
+            if (error) {
+                NSLog(@"定位出错,错误信息:%@",error);
+            }else{
+                NSLog(@"定位成功:经度:%f 纬度:%lf 当前地址:%@  \n location详细信息:%@ \n ",location.coordinate.latitude, location.coordinate.longitude, placeMark.name, location);
+//                [self.userLocationInfo setText:[NSString stringWithFormat:@"定位成功:经度:%f 纬度:%lf 当前地址:%@  \n location详细信息:%@ \n ",location.coordinate.latitude, location.coordinate.longitude, placeMark.name, location]];
+            }
+        } onViewController:self];
+    
+    
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -184,8 +202,9 @@
             break;
         }
         case 3:{
-            AXFSignatureController *vc = [[AXFSignatureController alloc] init];
-            [self.navigationController pushViewController:vc animated:NO];
+//            AXFFruitController *vc = [[AXFFruitController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+            self.tabBarController.selectedIndex = 1;
             break;
         }
         default:
@@ -193,6 +212,48 @@
     }
     
 }
+
+//代理方法
+#pragma mark - 实现签到cell的代理方法
+- (void)axffreshToHomeCell:(AXFFreshToHomeCell *)homeTopView andButtonType:(XFFreshToHomeCellBtnType)btnType{
+    switch (btnType) {
+        case 0:{
+            AXFtwoViewController *vc = [[AXFtwoViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES ];
+            break;
+        }
+        case 1:{
+            AXFXianfengController *vc = [[AXFXianfengController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 2:{
+            //跳到控制器，闪电超市
+            self.tabBarController.selectedIndex = 1;
+            break;
+        }
+            
+        case 3:{
+            //跳到控制器，闪电超市
+            self.tabBarController.selectedIndex = 1;
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+}
+-(void)axffreshToHomeCell5:(AXFFreshToHomeCell *)cell{
+    
+    AXFoneController *vc = [[AXFoneController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
+
 - (void)downLoadNetWorkData
 {
     [[NetworkTool sharedTool] GETWithURLString:@"http://m.beequick.cn/data/home?lat=39.977846184473&lng=116.49718705041&simulate_mobile=true&asid=57fb0b407b9698754&_r=0.292587641548531&reflogid=57fdaf800f1241935&cart_pids=&location=116.50965201661,39.985310454316&defPid=&designated_dealerid=" parameters:nil success:^(NSDictionary* responseObject) {
@@ -378,7 +439,11 @@
     {
         AXFStoresCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storeCell" forIndexPath:indexPath];
         AXFStroesModels *model = [AXFStroesModels yy_modelWithDictionary:_dataList[4]];
-        cell.delegate = self;
+        cell.btnBlock = ^(UIButton *btn){
+            //跳到控制器，闪电超市
+            self.tabBarController.selectedIndex = 1;
+            
+        };
         cell.model = model;
         return cell;
     }
@@ -387,7 +452,7 @@
         AXFFreshToHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"freshToHome" forIndexPath:indexPath];
         AXFmodels *models = [AXFmodels yy_modelWithDictionary:_dataList[5]];
         cell.fgoodsModel = models.act_rows[2].act_rows[0].cgoods_detail;
-        
+          cell.delegate = self;
         // 点击cell的时候没有点击的动画效果和选中效果
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
         return cell;

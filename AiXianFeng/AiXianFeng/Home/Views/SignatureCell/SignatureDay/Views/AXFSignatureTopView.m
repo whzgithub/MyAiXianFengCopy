@@ -63,7 +63,7 @@
     self.daysLabel = daysLabel;
     daysLabel.textAlignment = NSTextAlignmentCenter;
     daysLabel.textColor = [UIColor whiteColor];
-    daysLabel.font = [UIFont systemFontOfSize:14];
+    daysLabel.font = [UIFont systemFontOfSize:15];
     [daysLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.offset(0);
         make.top.equalTo(pointLabel.mas_bottom).offset(15);
@@ -115,7 +115,7 @@
     
     _totalPointV.points = _points;
     self.wasSelected = self.signBtn.isSelected;
-    _points = 30;
+
     //播放音效
     [self playSound];
     //动画撒金币效果
@@ -123,7 +123,11 @@
 
     temp = 0;
 }
-
+- (void)setWasSelected:(BOOL)wasSelected
+{
+    _wasSelected = wasSelected;
+    
+}
 
 - (void)startAnimation{
     CABasicAnimation * effectAnimation = [CABasicAnimation animationWithKeyPath:@"emitterCells.zanShape.birthRate"];
@@ -192,6 +196,7 @@
     self.soundID = [CommonTool creatSoundIDWithSoundName:@"签到金币音效.mp3"];
     [CommonTool playSoundWithSoundID:self.soundID];
 }
+
 
 
 @end

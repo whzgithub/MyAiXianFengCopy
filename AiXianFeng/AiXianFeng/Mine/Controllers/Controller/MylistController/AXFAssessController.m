@@ -19,7 +19,7 @@
     
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    UIImageView* imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"empty_order"]];
+    UIImageView* imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"v2_order_empty"]];
     
     [self.view addSubview:imgV];
     
@@ -33,7 +33,7 @@
     
     // 创建lebel
     
-    UILabel* label = [UILabel cz_labelWithText:@"还没有订单哦~" fontSize:15 color:[UIColor grayColor]];
+    UILabel* label = [UILabel cz_labelWithText:@"还没有评价哦~" fontSize:15 color:[UIColor grayColor]];
     
     [self.view addSubview:label];
     
@@ -46,19 +46,5 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

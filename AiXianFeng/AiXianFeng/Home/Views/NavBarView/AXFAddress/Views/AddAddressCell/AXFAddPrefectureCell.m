@@ -37,6 +37,7 @@
     prefectureTextField.placeholder = @"请选择您的住宅小区、大厦或学校";
     self.prefectureTextField = prefectureTextField;
     prefectureTextField.font = [UIFont systemFontOfSize:14];
+    prefectureTextField.keyboardType = UIKeyboardTypeTwitter;
     //    nameTextField.textAlignment = NSTextAlignmentLeft;
     [prefectureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
@@ -50,6 +51,11 @@
         make.right.offset(0);
         make.height.equalTo(self);
     }];
+}
+- (void)setPrectureName:(NSString *)prectureName
+{
+    _prectureName = prectureName;
+    self.prefectureTextField.text = prectureName;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

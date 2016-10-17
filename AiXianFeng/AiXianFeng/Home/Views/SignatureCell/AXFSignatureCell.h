@@ -8,7 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import "AXFSignatureModel.h"
+
 @class AXFSignatureCell;
 
 //定义区分按钮的枚举

@@ -16,5 +16,6 @@ typedef enum : NSUInteger {
 } BtnNumber;
 
 @interface AXFMineOrderView : UIControl
+// 点击按钮的下标
 @property(nonatomic,assign)NSInteger idx;
 @end

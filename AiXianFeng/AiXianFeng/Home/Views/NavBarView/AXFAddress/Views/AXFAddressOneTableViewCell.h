@@ -19,5 +19,12 @@
 
 @interface AXFAddressOneTableViewCell : UITableViewCell
 @property(nonatomic,weak)id<AXFAddressOneTableViewCellDelegate>delegate;
+//姓名
+@property(nonatomic,copy)NSString *name;
+//电话
+@property(nonatomic,copy) NSString *phoneNum;
+//地址
+@property(nonatomic,copy)NSString *detail;
+
 
 @end

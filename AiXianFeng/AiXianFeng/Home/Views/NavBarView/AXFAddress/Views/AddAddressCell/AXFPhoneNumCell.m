@@ -38,6 +38,7 @@
     phoneTextField.placeholder = @"鲜蜂侠联系您的电话";
     self.phoneTextField = phoneTextField;
     phoneTextField.font = [UIFont systemFontOfSize:14];
+    phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
     //    nameTextField.textAlignment = NSTextAlignmentLeft;
     [phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
@@ -52,6 +53,11 @@
         make.height.equalTo(self);
     }];
 
+}
+-(void)setPhoneNum:(NSString *)phoneNum
+{
+    _phoneNum = phoneNum;
+    self.phoneTextField.text = phoneNum;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

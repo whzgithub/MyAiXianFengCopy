@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AXFAddPrefectureCell : UITableViewCell
+//地区
+@property(nonatomic,copy)NSString *prectureName;
 
 @end

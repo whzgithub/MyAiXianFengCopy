@@ -6,20 +6,27 @@
 //  Copyright © 2016年 LongChuang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class AXFFreshToHomeCell,AXFcgoods_detailModel;
+
+
+// 定义此枚举用来区分按钮
+typedef enum : NSUInteger {
+    
+    XFFreshToHomeCellBtnTypeFirst,
+    XFFreshToHomeCellBtnTypeSecond,
+    XFFreshToHomeCellBtnTypeThird,
+    XFFreshToHomeCellBtnTypeFourth,
+    XFFreshToHomeCellBtnTypeFive,
+    
+} XFFreshToHomeCellBtnType;
+
 @protocol XFFreshToHomeCellDelegate <NSObject>
 
 @optional
-/// cell中按钮1的跳转的控制器的代理方法
-- (void)axffreshToHomeCell:(AXFFreshToHomeCell*)cell;
-/// cell中按钮2的跳转的控制器的代理方法
-- (void)axffreshToHomeCell2:(AXFFreshToHomeCell*)cell;
-/// cell中按钮1的跳转的控制器的代理方法
-- (void)axffreshToHomeCell3:(AXFFreshToHomeCell*)cell;
-/// cell中按钮1的跳转的控制器的代理方法
-- (void)axffreshToHomeCell4:(AXFFreshToHomeCell*)cell;
+/// cell中按钮的跳转的控制器的代理方法
+- (void)axffreshToHomeCell:(AXFFreshToHomeCell *)homeTopView andButtonType:(XFFreshToHomeCellBtnType)btnType;
+
+
 /// cell中按钮1的跳转的控制器的代理方法
 - (void)axffreshToHomeCell5:(AXFFreshToHomeCell*)cell;
 

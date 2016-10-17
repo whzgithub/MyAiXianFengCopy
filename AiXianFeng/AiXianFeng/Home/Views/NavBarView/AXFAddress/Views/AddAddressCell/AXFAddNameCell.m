@@ -23,6 +23,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupUI];
+    
     }
     return self;
 }
@@ -37,6 +38,7 @@
     [self.contentView addSubview:nameTextField];
     nameTextField.placeholder = @"收货人姓名";
     self.nameTextField = nameTextField;
+    nameTextField.keyboardType = UIKeyboardTypeTwitter;
     nameTextField.font = [UIFont systemFontOfSize:14];
 //    nameTextField.textAlignment = NSTextAlignmentLeft;
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -52,6 +54,11 @@
         make.height.equalTo(self);
     }];
     
+}
+- (void)setName:(NSString *)name
+{
+    _name = name;
+    self.nameTextField.text= name;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

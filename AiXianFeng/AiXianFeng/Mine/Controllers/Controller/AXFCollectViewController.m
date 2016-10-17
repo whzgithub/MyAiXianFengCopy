@@ -18,6 +18,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"商品收藏";
+    
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
    
     UIImageView* imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"empty_order"]];
     

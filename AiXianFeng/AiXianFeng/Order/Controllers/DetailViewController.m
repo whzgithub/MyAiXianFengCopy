@@ -2,10 +2,9 @@
 //  DetailViewController.m
 //  JHudViewDemo
 //
-//  Created by 晋先森 on 16/7/15.
-//  Copyright © 2016年 晋先森. All rights reserved.
+//  Created by Long on 16/10/10.
+//  Copyright © 2016年 LongChuang. All rights reserved.
 //
-
 #import "DetailViewController.h"
 
 #import "JHUD.h"

@@ -32,15 +32,12 @@
     
     UIButton *btn4 = [[UIButton alloc]init];
     btn4.tag = 4;
-    btn4.backgroundColor = [UIColor purpleColor];
     
     [self addSubview:btn4];
     [btn4 setBackgroundImage:[UIImage imageNamed:@"H29"] forState:UIControlStateNormal];
     [btn4 addTarget:self action:@selector(buttenClick4:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn5 = [[UIButton alloc]init];
-    
-    btn5.backgroundColor = [UIColor blackColor];
     
     [self addSubview:btn5];
     [btn5 setBackgroundImage:[UIImage imageNamed:@"H30"] forState:UIControlStateNormal];
@@ -49,17 +46,12 @@
 
     
     UIButton *btn6 = [[UIButton alloc]init];
-    
-    btn6.backgroundColor = [UIColor redColor];
-    
     [self addSubview:btn6];
     [btn6 setBackgroundImage:[UIImage imageNamed:@"H31"] forState:UIControlStateNormal];
      btn6.tag = 6;
     [btn6 addTarget:self action:@selector(buttenClick4:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn7 = [[UIButton alloc]init];
-    
-    btn7.backgroundColor = [UIColor blueColor];
     
     [self addSubview:btn7];
     [btn7 setBackgroundImage:[UIImage imageNamed:@"H32"] forState:UIControlStateNormal];
@@ -77,8 +69,6 @@
     }];
     
     UIButton *btn8 = [[UIButton alloc]init];
-    
-    btn8.backgroundColor = [UIColor blueColor];
     
     [self addSubview:btn8];
     

@@ -72,26 +72,20 @@
     NSArray* btns = [NSArray array];
     
     //2.新鲜推介图片
-    
-    UIButton* btn1 = [[UIButton alloc]init];
-    //  设置按钮的背景图片http://img01.bqstatic.com//upload/activity/2016092414525284.png@90Q.png
+    UIButton *btn1 = [self loadHomeTopBtnWithTitle:@""andImageName: @"author"andBtnType:XFFreshToHomeCellBtnTypeFirst];
     [btn1 setBackgroundImage:[UIImage imageNamed:@"2016092414525284.png@90Q"] forState:UIControlStateNormal];
     
     [v addSubview:btn1];
     
-    ///MRAK:-给按钮添1加点击事件http://img01.bqstatic.com//upload/activity/2016092418581322.png@90Q.png
-    
-    [btn1 addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     
     
-    UIButton* btn2 = [[UIButton alloc]init];
+    
+    //   图片2
+    UIButton *btn2 = [self loadHomeTopBtnWithTitle:@""andImageName:@"author" andBtnType:XFFreshToHomeCellBtnTypeSecond];
     [btn2 setBackgroundImage:[UIImage imageNamed:@"2016092418581322.png@90Q"] forState:UIControlStateNormal];
+    
+    
     [v addSubview:btn2];
-    
-    ///MRAK:给按钮2添加点击事件
-    
-    [btn2 addTarget:self action:@selector(btnClick2) forControlEvents:UIControlEventTouchUpInside];
-    
     
     
     btns = @[btn1,btn2 ];
@@ -106,15 +100,10 @@
     }];
     
     // 3.实物图片320160114110732_538131.jpg@!goods_recom
-    UIButton* btn3 = [[UIButton alloc]init];
-    //  设置按钮的背景图片20160114110732_538131.jpg@!goods_recom
-    [btn3 setBackgroundImage:[UIImage imageNamed:@"author"] forState:UIControlStateNormal];
+    UIButton *btn3 = [self loadHomeTopBtnWithTitle:@""andImageName:@"author" andBtnType:XFFreshToHomeCellBtnTypeThird];
     
     [v addSubview:btn3];
     
-    ///MRAK:给按钮3添加点击事件
-    
-    [btn3 addTarget:self action:@selector(btnClick3) forControlEvents:UIControlEventTouchUpInside];
     
     [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btn1.mas_bottom);
@@ -124,15 +113,10 @@
     }];
     
     // 3.实物图片4
-    UIButton* btn4 = [[UIButton alloc]init];
-    //  设置按钮的背景图片20160918161056_049453.jpg@!goods_recom
-    [btn4 setBackgroundImage:[UIImage imageNamed:@"author"] forState:UIControlStateNormal];
+    UIButton *btn4 = [self loadHomeTopBtnWithTitle:@""andImageName:@"author" andBtnType:XFFreshToHomeCellBtnTypeFourth];
     
     [v addSubview:btn4];
     
-    ///MRAK:给按钮4添加点击事件
-    
-    [btn4 addTarget:self action:@selector(btnClick4) forControlEvents:UIControlEventTouchUpInside];
     [btn4 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btn1.mas_bottom);
         make.width.mas_equalTo(([UIScreen mainScreen].bounds.size.width) / 3);
@@ -151,7 +135,7 @@
     
     [nameL mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(v);
+        make.left.equalTo(v).offset(6);
         make.top.equalTo(btn3.mas_bottom);
         make.right.equalTo(btn3);
         
@@ -167,7 +151,7 @@
     
     [nameLr mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(nameL.mas_right);
+        make.left.equalTo(nameL.mas_right).offset(6);
         make.top.equalTo(btn3.mas_bottom);
         make.right.equalTo(btn4);
         
@@ -212,7 +196,7 @@
     
     [nameL2 mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(v);
+        make.left.equalTo(v).offset(6);
         make.top.equalTo(nameL1.mas_bottom);
         make.right.equalTo(btn3);
     }];
@@ -226,7 +210,7 @@
     
     [nameL2r mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(nameL2.mas_right);
+        make.left.equalTo(nameL2.mas_right).offset(6);
         make.top.equalTo(nameL1r.mas_bottom);
         make.right.equalTo(btn4);
     }];
@@ -295,6 +279,7 @@
     
     // 3.实物图片5
     UIButton* btnt = [[UIButton alloc]init];
+    
     UIImageView* images1 = [[UIImageView alloc]init];
     
     [images1 sd_setImageWithURL:[NSURL URLWithString:@"http://img01.bqstatic.com//upload/activity/201609241500124.jpg@90Q.jpg"] placeholderImage:[UIImage imageNamed:@"author"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -328,46 +313,18 @@
     self.pricer = pricer;
 }
 
-
-
-#pragma 监听点击按钮1事件
-- (void)btnClick{
+#pragma mark- 按钮的点击事件
+- (void)homeTopBtnClick:(UIButton*)btn{
     
-    
-    if ([_delegate respondsToSelector:@selector(axffreshToHomeCell:)]) {
-        [_delegate axffreshToHomeCell:self];
+    //     当按钮点击之后去通知代理干活
+    //     判断代理方有没有实现协议方法,实现之后再去通知
+    if ([_delegate respondsToSelector:@selector(axffreshToHomeCell:andButtonType:)]) {
+        [_delegate axffreshToHomeCell:self andButtonType:btn.tag];
     }
-    
-    
-}
-#pragma 监听点击按钮去2事件
-- (void)btnClick2{
-    
-    if ([_delegate respondsToSelector:@selector(axffreshToHomeCell2:)]) {
-        [_delegate axffreshToHomeCell2:self];
-    }
-    
     
 }
 
-#pragma 监听点击按钮去3事件
-- (void)btnClick3{
-    
-    if ([_delegate respondsToSelector:@selector(axffreshToHomeCell3:)]) {
-        [_delegate axffreshToHomeCell3:self];
-    }
-    
-    
-}
-#pragma 监听点击按钮去4事件
-- (void)btnClick4{
-    
-    if ([_delegate respondsToSelector:@selector(axffreshToHomeCell4:)]) {
-        [_delegate axffreshToHomeCell4:self];
-    }
-    
-    
-}
+
 #pragma 监听点击按钮去5事件
 - (void)btnClick5{
     
@@ -376,6 +333,23 @@
     }
     
 }
+
+-(UIButton *)loadHomeTopBtnWithTitle:(NSString *)title andImageName:(NSString *)imageName andBtnType:(XFFreshToHomeCellBtnType)btnType
+{
+    //创建按钮
+    UIButton *btn = [[UIButton alloc]init];
+    
+    [self addSubview:btn];
+    
+    //给每一个按钮设置tag
+    btn.tag = btnType;
+    
+    [btn addTarget:self action:@selector(homeTopBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return btn;
+    
+}
+
 
 
 #pragma 重写set 方法
@@ -402,8 +376,8 @@
     self.nameLt.text = fgoodsModel.goods[1].name;
     self.nameL2.text = fgoodsModel.goods[0].specifics;
     self.nameL2t.text = fgoodsModel.goods[1].specifics;
-    self.price.text = fgoodsModel.goods[0].partner_price;
-    self.price.text = fgoodsModel.goods[1].partner_price;
+    self.price.text = [NSString stringWithFormat:@"¥%@",fgoodsModel.goods[0].partner_price];
+    self.price.text = [NSString stringWithFormat:@"¥%@",fgoodsModel.goods[1].partner_price];
 }
 
 @end

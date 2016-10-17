@@ -10,9 +10,8 @@
 
 @interface AXF_cicons_detail_hxx : NSObject
 
-@property(nonatomic, copy) NSString  *name;
 
-
+//cell显示的图片
 @property(nonatomic, copy) NSString  *img;
 
 

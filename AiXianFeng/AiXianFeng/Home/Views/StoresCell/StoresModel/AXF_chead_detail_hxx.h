@@ -10,6 +10,7 @@
 
 @interface AXF_chead_detail_hxx : NSObject
 
+//cell显示的图片
 @property(nonatomic, copy) NSString  *img;
 
 
